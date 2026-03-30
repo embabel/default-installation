@@ -1,0 +1,32 @@
+/*
+ * Theme: corporate
+ * Display Name: Corporate
+ * Description: Professional light theme with conservative blues — Salesforce, Azure style
+ */
+:root {
+  --sb-bg-dark: #e8ecf1;
+  --sb-bg-medium: #f3f4f6;
+  --sb-bg-light: #ffffff;
+  --sb-accent: #0070d2;
+  --sb-accent-light: #1b96ff;
+  --sb-link: #0070d2;
+  --sb-link-hover: #1b96ff;
+  --sb-heading: #0070d2;
+  --sb-text-primary: #181818;
+  --sb-text-secondary: #54698d;
+  --sb-text-muted: #8899aa;
+  --sb-border: #d8dde6;
+  --sb-error: #c23934;
+  --sb-success: #04844b;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(24, 24, 24, 0.08);
+  --lumo-contrast-20pct: rgba(24, 24, 24, 0.15);
+  --lumo-shade: #e0e4ea;
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}

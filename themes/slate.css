@@ -1,0 +1,31 @@
+/*
+ * Theme: slate
+ * Display Name: Slate
+ * Description: Clean neutral grays with blue accents — Linear, GitHub style
+ */
+:root {
+  --sb-bg-dark: #0d1117;
+  --sb-bg-medium: #161b22;
+  --sb-bg-light: #21262d;
+  --sb-accent: #58a6ff;
+  --sb-accent-light: #79c0ff;
+  --sb-link: #58a6ff;
+  --sb-link-hover: #79c0ff;
+  --sb-heading: #58a6ff;
+  --sb-text-primary: #c9d1d9;
+  --sb-text-secondary: #8b949e;
+  --sb-text-muted: #6e7681;
+  --sb-border: #30363d;
+  --sb-error: #f85149;
+  --sb-success: #3fb950;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(201, 209, 217, 0.1);
+  --lumo-contrast-20pct: rgba(201, 209, 217, 0.2);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}

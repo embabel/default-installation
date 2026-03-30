@@ -1,0 +1,36 @@
+/*
+ * Theme: cubicle
+ * Display Name: Cubicle
+ * Description: Beige, gray, and muted blue — the 2003 enterprise intranet experience
+ */
+:root {
+  --sb-bg-dark: #d8d4cc;
+  --sb-bg-medium: #f0ece4;
+  --sb-bg-light: #faf8f4;
+  --sb-accent: #336699;
+  --sb-accent-light: #4488bb;
+  --sb-link: #336699;
+  --sb-link-hover: #4488bb;
+  --sb-heading: #336699;
+  --sb-text-primary: #333333;
+  --sb-text-secondary: #666666;
+  --sb-text-muted: #999999;
+  --sb-border: #c0bdb6;
+  --sb-error: #cc3333;
+  --sb-success: #339933;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(51, 51, 51, 0.08);
+  --lumo-contrast-20pct: rgba(51, 51, 51, 0.15);
+  --lumo-shade: var(--sb-bg-dark);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+  --lumo-font-family: "Trebuchet MS", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+  --lumo-border-radius-m: 0px;
+  --lumo-border-radius-l: 0px;
+  --lumo-border-radius-s: 0px;
+}

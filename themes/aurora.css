@@ -1,0 +1,31 @@
+/*
+ * Theme: aurora
+ * Display Name: Aurora
+ * Description: Dark with shifting teal and green — futuristic calm
+ */
+:root {
+  --sb-bg-dark: #060b0b;
+  --sb-bg-medium: #0a1010;
+  --sb-bg-light: #152020;
+  --sb-accent: #2dd4bf;
+  --sb-accent-light: #5eead4;
+  --sb-link: #2dd4bf;
+  --sb-link-hover: #5eead4;
+  --sb-heading: #2dd4bf;
+  --sb-text-primary: #d1fae5;
+  --sb-text-secondary: #6ee7b7;
+  --sb-text-muted: #34d399;
+  --sb-border: #1a2e2e;
+  --sb-error: #fca5a5;
+  --sb-success: #34d399;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(209, 250, 229, 0.08);
+  --lumo-contrast-20pct: rgba(209, 250, 229, 0.15);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}

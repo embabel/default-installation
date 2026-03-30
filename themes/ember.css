@@ -1,0 +1,31 @@
+/*
+ * Theme: ember
+ * Display Name: Ember
+ * Description: Warm dark with orange accents — Grafana, Datadog style
+ */
+:root {
+  --sb-bg-dark: #09090b;
+  --sb-bg-medium: #111215;
+  --sb-bg-light: #1c1c21;
+  --sb-accent: #f59e0b;
+  --sb-accent-light: #fbbf24;
+  --sb-link: #f59e0b;
+  --sb-link-hover: #fbbf24;
+  --sb-heading: #f59e0b;
+  --sb-text-primary: #e4e4e7;
+  --sb-text-secondary: #a1a1aa;
+  --sb-text-muted: #71717a;
+  --sb-border: #27272a;
+  --sb-error: #ef4444;
+  --sb-success: #22c55e;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(228, 228, 231, 0.08);
+  --lumo-contrast-20pct: rgba(228, 228, 231, 0.15);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}

@@ -1,0 +1,31 @@
+/*
+ * Theme: neon
+ * Display Name: Neon
+ * Description: Black with electric purple and pink — cyberpunk AI aesthetic
+ */
+:root {
+  --sb-bg-dark: #050507;
+  --sb-bg-medium: #0a0a0e;
+  --sb-bg-light: #161620;
+  --sb-accent: #c084fc;
+  --sb-accent-light: #d8b4fe;
+  --sb-link: #c084fc;
+  --sb-link-hover: #d8b4fe;
+  --sb-heading: #f472b6;
+  --sb-text-primary: #e4e4e7;
+  --sb-text-secondary: #a1a1aa;
+  --sb-text-muted: #71717a;
+  --sb-border: #27272a;
+  --sb-error: #fb7185;
+  --sb-success: #4ade80;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(228, 228, 231, 0.08);
+  --lumo-contrast-20pct: rgba(228, 228, 231, 0.15);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}

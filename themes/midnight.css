@@ -1,0 +1,32 @@
+/*
+ * Theme: midnight
+ * Display Name: Midnight
+ * Description: Deep navy with cyan accents — the default AI assistant look
+ * Default: true
+ */
+:root {
+  --sb-bg-dark: #070b14;
+  --sb-bg-medium: #0b0e17;
+  --sb-bg-light: #151a2b;
+  --sb-accent: #38bdf8;
+  --sb-accent-light: #7dd3fc;
+  --sb-link: #38bdf8;
+  --sb-link-hover: #7dd3fc;
+  --sb-heading: #38bdf8;
+  --sb-text-primary: #e2e8f0;
+  --sb-text-secondary: #94a3b8;
+  --sb-text-muted: #64748b;
+  --sb-border: #1e293b;
+  --sb-error: #f87171;
+  --sb-success: #34d399;
+  --lumo-base-color: var(--sb-bg-medium);
+  --lumo-primary-color: var(--sb-accent);
+  --lumo-primary-text-color: var(--sb-accent);
+  --lumo-body-text-color: var(--sb-text-primary);
+  --lumo-secondary-text-color: var(--sb-text-secondary);
+  --lumo-tertiary-text-color: var(--sb-text-muted);
+  --lumo-contrast-10pct: rgba(226, 232, 240, 0.1);
+  --lumo-contrast-20pct: rgba(226, 232, 240, 0.2);
+  --lumo-error-color: var(--sb-error);
+  --lumo-success-color: var(--sb-success);
+}
