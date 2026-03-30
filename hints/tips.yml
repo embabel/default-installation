@@ -1,0 +1,161 @@
+# Embabel Me — Tips, Hints, and Fun Facts
+# Categories: hint, did-you-know, fun-fact
+# Optional action: types text into the chat input when clicked
+
+# === HINTS ===
+
+- category: hint
+  title: Slash Commands
+  body: "Type **/** in the chat to see available commands. Try /joke for a laugh or /research to kick off a deep dive on any topic."
+  action:
+    label: "Try /joke"
+    chatInput: "/joke "
+
+- category: hint
+  title: Vibe Code an App
+  body: "Ask me to build you an HTML app and I'll create it using available tools. Just describe what you want — I'll handle the code."
+  action:
+    label: "Build an App"
+    chatInput: "Build me an app that "
+
+- category: hint
+  title: Set Secrets Securely
+  body: "Type `set KEY = value` to store API keys securely. They're never sent to the LLM and persist across sessions."
+  action:
+    label: "Set a Secret"
+    chatInput: "set MY_API_KEY = "
+
+- category: hint
+  title: Change My Personality
+  body: "Ask me to become anyone — Humphrey Bogart, Colossus, Shakespeare, a pirate. I'll update my personality files and stay in character."
+  action:
+    label: "Change Personality"
+    chatInput: "Change your personality to "
+
+- category: hint
+  title: Research Any Topic
+  body: "I can research topics using web search, arXiv, and Wikipedia, then save findings to a living document that updates over time."
+  action:
+    label: "Start Research"
+    chatInput: "/research "
+
+- category: hint
+  title: Multiple Workspaces
+  body: "You can create separate workspaces for different projects. Go to **Settings > Workspace** to switch or create new ones."
+
+- category: hint
+  title: Connect External APIs
+  body: "I can learn any OpenAPI or GraphQL API. Just give me a spec URL and I'll create tools from it automatically."
+  action:
+    label: "Learn an API"
+    chatInput: "Learn this API: "
+
+- category: hint
+  title: Schedule Recurring Tasks
+  body: "Set up cron jobs to run actions automatically — daily research briefings, weekly reports, or periodic monitoring."
+  action:
+    label: "Schedule Something"
+    chatInput: "Schedule a daily "
+
+- category: hint
+  title: Apps Live in the Header
+  body: "Click the **Apps** button in the header to see all your generated apps. They open in a new tab and call backend tools through the gateway."
+
+- category: hint
+  title: Theme Switching
+  body: "Click your avatar to open the User panel, then pick a theme. Try **Neon** for cyberpunk vibes or **Cubicle** for 2003 nostalgia."
+
+- category: hint
+  title: Docker Sandbox
+  body: "I have a `scratch_run` tool that executes code in a Docker sandbox with Python, Node.js, Java, and more. Ask me to run any code."
+  action:
+    label: "Run Some Code"
+    chatInput: "Run this Python code: print('Hello from the sandbox!')"
+
+- category: hint
+  title: Living Documents
+  body: "Documents in your workspace are living — research actions can update them over time. Check the **Data > Artifacts** tab."
+
+# === DID YOU KNOW ===
+
+- category: did-you-know
+  title: Tool Gateway
+  body: "Every tool available to me is also available as a REST API at `/api/v1/tools/{name}`. Generated apps use this to call backend tools directly."
+
+- category: did-you-know
+  title: Packs Are Git Repos
+  body: "Packs bundle actions, types, and MCP servers in git repos. Install them from the **Directory** tab or browse available packs under **Packs**."
+
+- category: did-you-know
+  title: Memory System
+  body: "I learn facts about you from our conversations using the DICE semantic memory system. Click your avatar to see what I remember."
+
+- category: did-you-know
+  title: MCP Servers
+  body: "MCP (Model Context Protocol) servers run in Docker containers and start lazily — only when you first use a tool from them. No startup cost."
+
+- category: did-you-know
+  title: Webhook Automation
+  body: "Send a POST to `/api/v1/webhooks/{source}` and I'll detect the payload type, notify you, and let you configure an automatic response."
+
+- category: did-you-know
+  title: Skills Follow a Standard
+  body: "Skills follow the [Agent Skills Specification](https://agentskills.io/specification) — a portable format for teaching AI assistants."
+
+- category: did-you-know
+  title: OpenAPI Spec
+  body: "The full platform API is documented at `/swagger-ui`. The tool gateway has its own spec at `/api/v1/tools/ui`."
+
+- category: did-you-know
+  title: Neo4j Powers the Brain
+  body: "Your knowledge graph, memories, and document embeddings all live in Neo4j. Check the **Data > Database** tab for a direct link to the browser."
+
+- category: did-you-know
+  title: Channels
+  body: "I can connect to Telegram, Discord, and Slack. Configure a channel in the **Automation > Channels** tab and chat with me from anywhere."
+
+- category: did-you-know
+  title: Context Switching
+  body: "Click your avatar and change the **Context** to separate memories and documents between projects. Each context has its own knowledge."
+
+# === FUN FACTS ===
+
+- category: fun-fact
+  title: The Weltchronik
+  body: "The Embabel logo is from the *Weltchronik* (World Chronicle), a 15th century illuminated manuscript by Rudolf von Ems depicting the history of the world from Creation to King Solomon."
+
+- category: fun-fact
+  title: Utility AI
+  body: "The agent platform uses **Utility AI** — a decision-making pattern from game development where agents score possible actions and pick the best one. Same technique used in The Sims."
+
+- category: fun-fact
+  title: What's in a Name?
+  body: "Embabel comes from combining 'embed' and 'babel' — embedding knowledge across the tower of languages and tools."
+
+- category: fun-fact
+  title: GOAP Planning
+  body: "Actions and goals use **Goal-Oriented Action Planning** (GOAP), originally developed for the F.E.A.R. first-person shooter game AI in 2005."
+
+- category: fun-fact
+  title: Marvin
+  body: "The default personality is Marvin the Paranoid Android from *The Hitchhiker's Guide to the Galaxy*. He has a brain the size of a planet and a perpetual existential crisis."
+
+- category: fun-fact
+  title: Jinja Templates
+  body: "Personality and behavior files use Jinja2 templates — the same engine used by Ansible, Flask, and dbt. Your personality is literally a template."
+
+- category: fun-fact
+  title: Docker All The Way Down
+  body: "MCP servers, the code sandbox, and Neo4j all run in Docker containers. It's containers all the way down."
+
+- category: fun-fact
+  title: Spring Boot
+  body: "This platform runs on Spring Boot, created by Rod Johnson — the same person who created the Spring Framework in 2002. Some things come full circle."
+
+- category: fun-fact
+  title: Built with Claude Code
+  body: "Significant portions of this codebase were written by Claude Code — an AI coding assistant. The AI is helping build the AI assistant platform. Very meta."
+
+- category: fun-fact
+  title: Cubicle Theme
+  body: "The Cubicle theme uses Trebuchet MS, zero border radius, and beige backgrounds — faithfully recreating the 2003 enterprise intranet experience. You're welcome."
