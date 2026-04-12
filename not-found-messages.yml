@@ -1,0 +1,15 @@
+# Not-found messages shown when a user navigates to a missing artifact
+# (app, diagram, etc.). One is picked at random per request.
+#
+# Format: headline|subtext
+# Both halves are Jinja templates with {{ name }} (filename) and {{ type }}
+# (artifact type: app, diagram, etc.).
+#
+# To customize per deployment, edit this file in the admin directory
+# ({workspaceBase}/admin/not-found-messages.yml).
+
+- "This {{ type }} has been vibe-uncoded.|The {{ type }} {{ name }} doesn't exist. It may have been deleted, renamed, or never built in the first place."
+- "Looking for {{ name }}? So are we.|This {{ type }} isn't here. Ask your assistant to build it — or check the Artifacts panel for what's available."
+- "{{ name }} isn't a {{ type }}. Yet.|Nothing at this URL. The good news: your assistant can create one in about 30 seconds."
+- "No nodes. No edges. Nothing.|{{ name }} isn't a {{ type }} we know about. Ask your assistant to create one."
+- "Gone. Like tears in rain.|{{ name }} wasn't found. Or maybe it was never here to begin with."
