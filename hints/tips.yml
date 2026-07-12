@@ -19,13 +19,6 @@
     chatInput: "Build me an app that "
 
 - category: hint
-  title: Set Secrets Securely
-  body: "Type `set KEY = value` to store API keys securely. They're never sent to the LLM and persist across sessions."
-  action:
-    label: "Set a Secret"
-    chatInput: "set MY_API_KEY = "
-
-- category: hint
   title: Change My Personality
   body: "Ask me to become anyone — Humphrey Bogart, Colossus, Shakespeare, a pirate. I'll update my personality files and stay in character."
   action:
