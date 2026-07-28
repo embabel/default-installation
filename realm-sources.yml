@@ -1,4 +1,4 @@
-# GitHub organizations and users to search for pack-* repos.
+# GitHub organizations and users to search for realm-* repos.
 # type: "org" for GitHub organizations, "user" for personal accounts.
 - name: embabel
   type: org

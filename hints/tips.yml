@@ -76,8 +76,8 @@
   body: "Every tool available to me is also available as a REST API at `/api/v1/tools/{name}`. Generated apps use this to call backend tools directly."
 
 - category: did-you-know
-  title: Packs Are Git Repos
-  body: "Packs bundle actions, types, and API integrations in git repos. Install them from the **Directory** tab or browse available packs under **Packs**."
+  title: Realms Are Git Repos
+  body: "Realms bundle actions, types, and API integrations in git repos. Install them from the **Directory** tab or browse available realms under **Realms**."
 
 - category: did-you-know
   title: Memory System
