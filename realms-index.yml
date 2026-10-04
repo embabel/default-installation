@@ -7,6 +7,47 @@
 # Public repositories only: a private realm's clone URL is no use to anybody who cannot
 # see it. An appliance with a token still finds those by scanning directly.
 realms:
+- name: account-health
+  source: https://github.com/embabel-worlds/realm-account-health.git
+  url: https://github.com/embabel-worlds/realm-account-health
+  description: 'Which customers are in trouble, which are ready for more, and what the CRM does not know
+    about them — read across a CRM, a helpdesk and a billing system through the business vocabulary (realm-business-vocabulary),
+    naming no product. Every view starts at a CustomerAccount, the spine each product realm keys, so the
+    same views answer whether the CRM is Odoo or something else. Nothing is stored: each answer is read
+    from the three systems when it is asked for.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - crm
+  - support
+  - billing
+  maturity: experimental
+- name: astrology
+  source: https://github.com/embabel-worlds/realm-astrology.git
+  url: https://github.com/embabel-worlds/realm-astrology
+  description: 'Natal charts, transits and the sky over anything you have a timestamp for. The ephemeris
+    is in the realm''s own bundle, so a chart needs no network, no key and no account: positions from
+    astronomy-engine, which agrees with NASA JPL Horizons to under an arcsecond on a planet, and houses,
+    ascendant and — the thing that is actually hard — the birthplace''s historical time zone from deepnatal,
+    which refuses to cast a chart rather than guess at a daylight-saving hole or a pre-standard-time zone.
+    Everything is a Virtual Cypher hop from a pinned key, so a chart is a query and a REST call rather
+    than only a page: pin a BirthMoment for the chart, its placements, its aspects and its cusps; a TransitDay
+    for what the sky is doing to it; a SkyMoment for the sky over any instant at all, which is how a commit,
+    a failed build or a closed deal gets a sky over it. What makes it unusual is that it tells you how
+    good it is. Every chart carries how far its two independent ephemerides disagreed, whether Placidus
+    had to be abandoned for the latitude, whether another time zone is defensible for those coordinates,
+    and whether an unknown birth time leaves the Moon''s sign undecided. And VERIFIED_BY audits the arithmetic
+    against NASA, live, for any chart — so the numbers are checkable rather than merely confident. Keyless.
+    Nothing to configure.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - astrology
+  - astronomy
+  - ephemeris
+  - virtual-cypher
+  - nasa
+  maturity: experimental
 - name: au-donations
   source: https://github.com/embabel-worlds/realm-au-donations.git
   url: https://github.com/embabel-worlds/realm-au-donations
@@ -31,6 +72,40 @@ realms:
   - open-data
   - sql
   - provisioned-store
+- name: bible
+  source: https://github.com/embabel-worlds/realm-bible.git
+  url: https://github.com/embabel-worlds/realm-bible
+  description: 'The Bible as a graph you can query. Every verse, chapter and book is stored, with two
+    texts on each verse: the King James Version, which is the default, and the World English Bible, a
+    modern public-domain translation. Both are searchable. Five older translations (ASV, Basic English,
+    Darby, Douay-Rheims, Young''s Literal) are fetched live for any verse you want to compare. The people
+    come from Theographic Bible Metadata: 3,069 of them, joined to the verses that mention them and to
+    their fathers and mothers. A name is not a person — there are 26 Zechariahs — so ask by name and expect
+    every bearer. Keyless. Nothing to configure.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - bible
+  - scripture
+  - reference
+  - people
+  maturity: experimental
+- name: business-vocabulary
+  source: https://github.com/embabel-worlds/realm-business-vocabulary.git
+  url: https://github.com/embabel-worlds/realm-business-vocabulary
+  description: The words a business uses for its customers, whatever product it keeps them in. Parent
+    types only — a customer account, a note about it, an opportunity, a support case, an invoice — with
+    no producers, no views and no vendor. A realm over a CRM, a helpdesk or a billing system declares
+    its own types as children of these, so a question asked about SupportCase is answered by whichever
+    helpdesk is installed, and keeps being answered when it is replaced.
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - vocabulary
+  - crm
+  - support
+  - billing
+  maturity: experimental
 - name: ca-streets
   source: https://github.com/embabel-worlds/realm-ca-streets.git
   url: https://github.com/embabel-worlds/realm-ca-streets
@@ -54,6 +129,46 @@ realms:
   - weather
   - maps
   - apps
+- name: chatwoot
+  source: https://github.com/embabel-worlds/realm-chatwoot.git
+  url: https://github.com/embabel-worlds/realm-chatwoot
+  description: 'Chatwoot, the open source customer support inbox, through its OWN application API — never
+    the database. A conversation is a SupportCase and a message a SupportMessage of the business vocabulary
+    (realm-business-vocabulary, installed first), so a question asked about support cases is answered
+    here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
+    own UI is what the next query sees.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - integrations
+  - support
+  maturity: experimental
+- name: chess
+  source: https://github.com/embabel-worlds/realm-chess.git
+  url: https://github.com/embabel-worlds/realm-chess
+  description: 'A chessboard, a strong engine, and the plans a position calls for. Stockfish 19 — compiled
+    to WebAssembly, running in the appliance''s own sandbox — gives the best lines. The position''s imbalances,
+    in Jeremy Silman''s sense, are computed from the board: material, the minor pieces, pawn structure,
+    space, files, outposts, development, king safety. The Lichess opening book names it — along the game''s
+    moves, so a line keeps its name long after it leaves the book — and the Chess Opening Theory wikibook
+    (CC BY-SA 4.0) says what theory holds along the line. A model with the chess-plans skill then decides
+    the plans for both sides from those facts — the King''s Indian Classical and Samisch, or the Exchange
+    and closed Ruy Lopez, call for opposite plans, and the skill knows which. Everything is a Virtual
+    Cypher hop from a pinned Position (HAS_IMBALANCES, IN_OPENING, HAS_CANDIDATE, HAS_PLAN) or GameLine
+    (IN_OPENING, HAS_THEORY, HAS_PLAN), so the analysis is a query and a REST call, not only a page. No
+    key needed for any of that. With a Lichess token — which the realm asks for, and can do without —
+    it also shows what masters played in a position, and what any Lichess player has chosen there, with
+    results. The engine is GPL-3.0, and so is this realm.'
+  version: 0.4.0
+  author: Rod Johnson
+  tags:
+  - chess
+  - games
+  - engine
+  - virtual-cypher
+  - apps
+  - skills
+  maturity: experimental
 - name: diffbot
   source: https://github.com/embabel-worlds/realm-diffbot.git
   url: https://github.com/embabel-worlds/realm-diffbot
@@ -73,6 +188,17 @@ realms:
   - enrichment
   - virtual-cypher
   - ownership
+- name: doom
+  source: https://github.com/embabel-worlds/realm-doom.git
+  url: https://github.com/embabel-worlds/realm-doom
+  description: Doom, shareware episode one, in a realm browser app, with your runs in Virtual Cypher and
+    a scoreboard to share with friends.
+  version: 0.3.0
+  author: embabel
+  tags:
+  - game
+  - demo
+  - scoreboard
 - name: drugtrials
   source: https://github.com/embabel-worlds/realm-drugtrials.git
   url: https://github.com/embabel-worlds/realm-drugtrials
@@ -351,6 +477,35 @@ realms:
   - openapi
   - skills
   - personalities
+- name: kyc-aml
+  source: https://github.com/embabel-worlds/realm-kyc-aml.git
+  url: https://github.com/embabel-worlds/realm-kyc-aml
+  description: KYC onboarding with AML sanctions screening. Extracts a legal-entity KycCase from an uploaded
+    certificate, screens it against the OFAC SDN list loaded into the graph, has an LLM disposition each
+    candidate, then recomputes risk (baseline vs AML-adjusted) and reports it. Port of the meta-agent
+    kycdemo pipeline.
+  version: 0.0.1
+  author: Igor Dayen
+  tags:
+  - kyc
+  - aml
+  - sanctions
+  - compliance
+- name: lago
+  source: https://github.com/embabel-worlds/realm-lago.git
+  url: https://github.com/embabel-worlds/realm-lago
+  description: 'Lago, the open source billing system, through its OWN API — never the database. A customer
+    is a BillingCustomer, a subscription a BillingSubscription and an invoice a BillingInvoice of the
+    business vocabulary (realm-business-vocabulary, installed first), so a question asked about billing
+    is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
+    which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
+    nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - integrations
+  - billing
+  maturity: experimental
 - name: legal
   source: https://github.com/embabel-worlds/realm-legal.git
   url: https://github.com/embabel-worlds/realm-legal
@@ -603,8 +758,22 @@ realms:
     to pay. Cross-source views answer what no single register can: CrimeVsIncome, CrimeVsIncomeAcrossDistricts,
     DistrictCrimeLeague, IncomeByParty, SeatsAndMargins, PriceTrendAtMyPlaces, WhereNotToEat, PlaceDossier.
     The Street Lens app (`apps/street-lens.html`) puts it all on a map of Britain — a dossier per dot.
-    No API keys and no accounts — the realm works the moment it is installed.'
-  version: 0.1.0
+    The COMMUNITY axis reads what a place-based data platform copies in — school readiness, youth justice
+    first-time entrants, NEET, children in low income, under-18 conceptions, childhood obesity, life expectancy
+    (OHID Fingertips, with the publisher''s own "compared to England" on every row), the claimant count
+    and population by age (NOMIS), the Indices of Deprivation 2025, and DfE early-years, absence and KS4
+    results — live, dated, at the authority. The ORGANISATION axis makes the unit an organisation rather
+    than a statistic: every charity declaring the place as an area of operation and its daily register
+    record and event history (Charity Commission), every published grant into the district and who received
+    it (360Giving), and the register record behind any recipient identifier (Find that Charity). Views:
+    PlaceProfile, WhereThisPlaceStandsOut, SmartInsights (ranked against every authority in England, with
+    a dial), IndicatorTrendAtPlace, IndicatorAcrossEngland, MostDeprivedDistricts2025, CharitiesOperatingHere,
+    CharityChangesHere, WhoFundsThisPlace, FundedOrganisationsHere, SchoolReadinessAtPlace, Ks4AttainmentAtPlace
+    and more. Three DERIVE rule sets conclude what no query can: charity succession and lineage from the
+    Commission''s event log, and money regranted through a publishing intermediary from 360Giving. The
+    Community Profile app (`apps/community-profile.html`) puts a place''s profile on one page. No API
+    keys and no accounts — the realm works the moment it is installed.'
+  version: 0.4.0
   author: rod
   tags:
   - united-kingdom
