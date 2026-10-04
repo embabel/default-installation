@@ -1,0 +1,62 @@
+# Regenerate the realm catalogue every appliance reads.
+#
+# The index exists because an unauthenticated appliance cannot afford to open every realm's manifest
+# itself. That trade only holds while this file is current: a stale `maturity` claim either hides a
+# realm that was finished months ago or vouches for one that has since been torn up, and a stale
+# clone URL is worse than an absent entry. So this runs on a schedule rather than on somebody
+# remembering, and commits only when the catalogue actually moved.
+name: realms-index
+
+on:
+  schedule:
+    # Hourly: a tokenless appliance learns of a new realm only from here, so a week's
+    # schedule hid every new realm from public installs for up to a week.
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/build-realms-index.py
+      - .github/workflows/realms-index.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: Build the index
+        env:
+          # The workflow's own token is enough because the index lists PUBLIC repositories only,
+          # and public content is readable by any authenticated request. If GitHub ever refuses
+          # these reads, put a read-only PAT in a secret and use it here instead — the failure to
+          # watch for is a shrinking catalogue, so the step below fails on one.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build-realms-index.py
+      - name: Refuse a catalogue that lost realms
+        run: |
+          # A source that 403s contributes nothing, which looks exactly like a realm being retired.
+          # Deleting most of the catalogue in one run is the shape of a broken token, not of news.
+          before=$(git show HEAD:realms-index.yml | grep -c '^- name:' || echo 0)
+          after=$(grep -c '^- name:' realms-index.yml || echo 0)
+          echo "realms: $before -> $after"
+          if [ "$after" -lt $(( before - before / 5 )) ]; then
+            echo "::error::the catalogue lost more than a fifth of its realms ($before -> $after); refusing to publish"
+            exit 1
+          fi
+      - name: Publish if it changed
+        run: |
+          git config user.name 'embabel-bot'
+          git config user.email 'bot@embabel.com'
+          if git diff --quiet -- realms-index.yml; then
+            echo 'catalogue unchanged'
+            exit 0
+          fi
+          git add realms-index.yml
+          git commit -m 'The realm catalogue, as the realms themselves now describe it'
+          git push
