@@ -316,20 +316,25 @@ realms:
     nothing suppressed); median standard of living, poverty and INEQUALITY (INSEE Filosofi 2023); immigrant
     share, age structure and population (census 2012-2023); density; property prices per m2 for flats
     and houses in every commune (Etalab DVF statistics); the mayor (after the March 2026 municipales)
-    and the departement''s deputies. Ask about ANY commune — (:FrCommune {code}), (:FrMelodiPlace {geo}),
-    (:FrDeptRef {code}) — or the places you watch (:FrPlace). National cross-sections hang off (:FrCrimeSlice),
-    (:FrDeptCrimeSlice), (:FrCommunes {set:''france''}), (:FrDepartements {set:''france''}) and (:FrHousingScale),
-    so places can be ranked, trended and modelled across France. Views — places: FrPlaceDossier, FrCrimeAtMyPlaces,
-    FrCrimeTrendAtPlace, FrDeputiesAtMyPlaces; any commune: FrCommuneSnapshot, FrCommuneCrime, FrCommuneContext;
-    housing: FrHousingAffordability, FrDeptHousing; crime: FrNationalTrend, FrDepartementLeague, FrCrimeLeague,
-    FrCrimeMovers; models: FrDepartementModel, FrDepartementPredictorsOneByOne, FrDepartementRows, FrWhatBestPredictsCrime,
-    FrCrimePredictorsOneByOne, FrCommunesRanked, FrModelRows. Honest limits, carried into every view:
-    France publishes NO geolocated crime and nothing below the commune (bar Paris/Lyon/Marseille arrondissements);
-    a commune''s crime is published only after >5 facts in each of 3 consecutive years; France collects
-    no ethnic statistics, so "immigre" (born abroad, not French at birth) is the closest published measure;
-    DVF excludes Alsace-Moselle and Mayotte. Models describe places, never people. No API keys and no
-    accounts - the realm works the moment it is installed.'
-  version: 0.3.0
+    and the departement''s deputies; census unemployment and qualifications (2023); the official European-election
+    result of 9 June 2024 in every commune, all 38 lists by panel number, never grouped or labelled by
+    the realm; and Eurostat''s regional statistics for France AND its neighbours (GDP and household income
+    per head in PPS, unemployment, life expectancy, median age, population, density, since 2012) on one
+    European yardstick. Ask about ANY commune — (:FrCommune {code}), (:FrMelodiPlace {geo}), (:FrDeptRef
+    {code}), any European region (:EuRegion {code}) — or the places you watch (:FrPlace). National cross-sections
+    hang off (:FrCrimeSlice), (:FrDeptCrimeSlice), (:FrCommunes {set:''france''}), (:FrDepartements {set:''france''})
+    and (:FrHousingScale), so places can be ranked, trended and modelled across France. Views — places:
+    FrPlaceDossier, FrCrimeAtMyPlaces, FrCrimeTrendAtPlace, FrDeputiesAtMyPlaces; any commune: FrCommuneSnapshot,
+    FrCommuneCrime, FrCommuneContext; housing: FrHousingAffordability, FrDeptHousing; crime: FrNationalTrend,
+    FrDepartementLeague, FrCrimeLeague, FrCrimeMovers; models: FrDepartementModel, FrDepartementPredictorsOneByOne,
+    FrDepartementRows, FrWhatBestPredictsCrime, FrCrimePredictorsOneByOne, FrCommunesRanked, FrModelRows;
+    across borders: EuBorderRegions. Honest limits, carried into every view: France publishes NO geolocated
+    crime and nothing below the commune (bar Paris/Lyon/Marseille arrondissements); a commune''s crime
+    is published only after >5 facts in each of 3 consecutive years; France collects no ethnic statistics,
+    so "immigre" (born abroad, not French at birth) is the closest published measure; DVF excludes Alsace-Moselle
+    and Mayotte. Models describe places, never people. No API keys and no accounts - the realm works the
+    moment it is installed.'
+  version: 0.4.0
   author: rjohnson
   tags:
   - france
@@ -338,6 +343,9 @@ realms:
   - housing
   - census
   - insee
+  - elections
+  - eurostat
+  - europe
 - name: github
   source: https://github.com/embabel-worlds/realm-github.git
   url: https://github.com/embabel-worlds/realm-github
