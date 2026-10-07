@@ -1,0 +1,57 @@
+# What a realm can say it is FOR. The authoritative list: a realm's manifest declares one of these
+# ids as its `category`, and nothing else is a category.
+#
+# WHY A LIST, WHEN TAGS EXIST. Tags are free text, for finding things, and nobody reviews them. The
+# 44 realms in embabel-worlds carried 125 of them, 93 used by one realm only, and the commonest
+# (`openapi`, `apps`, `skills`) say how a realm is built. A store cannot be browsed by that. A
+# category is a closed claim instead, like `maturity`: checked against this file when the catalogue
+# is built, and by `scripts/build-realms-index.py --check realm.yml` before a realm is published.
+#
+# TO ADD ONE, add it here, in a pull request. That is the review. An id is never renamed or reused
+# once realms declare it: retire a category by moving its realms, then removing it.
+#
+# `icon` is a Phosphor icon name (phosphoricons.com), so every surface draws the same one.
+- id: customers
+  label: Customers & Sales
+  icon: address-book
+  description: CRMs, support desks and what reads across them to say how a customer is doing.
+- id: finance
+  label: Finance & Billing
+  icon: currency-dollar
+  description: Invoices, subscriptions, payments and the ledgers behind them.
+- id: compliance
+  label: Risk & Compliance
+  icon: shield-check
+  description: 'Screening, regulatory filings, contracts and disclosure: what you must check or report.'
+- id: government
+  label: Government & Civic
+  icon: bank
+  description: Public registers and open government data, usually for one country or place.
+- id: knowledge
+  label: Knowledge & Research
+  icon: book-open
+  description: Reference graphs and research sources to look things up in or enrich your own data from.
+- id: developer
+  label: Developer Tools
+  icon: terminal
+  description: Source hosting, CI and the tools for building realms themselves.
+- id: security
+  label: Security & Dependencies
+  icon: lock-key
+  description: What your software depends on, how well it is maintained and what it is exposed to.
+- id: science
+  label: Science & Environment
+  icon: planet
+  description: 'The physical world: air, sky, the grid, and medical and scientific evidence.'
+- id: productivity
+  label: Productivity
+  icon: calendar-check
+  description: Mail, meetings and the working day.
+- id: lifestyle
+  label: Lifestyle & Entertainment
+  icon: film-slate
+  description: Films, music, games, travel and hobbies.
+- id: platform
+  label: Platform
+  icon: puzzle-piece
+  description: 'Realms that extend Worlds itself: shared vocabularies and assistant personalities.'

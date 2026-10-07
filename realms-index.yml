@@ -4,8 +4,56 @@
 # realm's own manifest speaking, so a `maturity` claim here is the author's, not a
 # curator's opinion. Regenerate when a realm is published, retired, or changes its claim.
 #
+# `categories` is realm-categories.yml, the authoritative list; a realm's `category` is on it
+# or is not carried.
+#
 # Public repositories only: a private realm's clone URL is no use to anybody who cannot
 # see it. An appliance with a token still finds those by scanning directly.
+categories:
+- id: customers
+  label: Customers & Sales
+  icon: address-book
+  description: CRMs, support desks and what reads across them to say how a customer is doing.
+- id: finance
+  label: Finance & Billing
+  icon: currency-dollar
+  description: Invoices, subscriptions, payments and the ledgers behind them.
+- id: compliance
+  label: Risk & Compliance
+  icon: shield-check
+  description: 'Screening, regulatory filings, contracts and disclosure: what you must check or report.'
+- id: government
+  label: Government & Civic
+  icon: bank
+  description: Public registers and open government data, usually for one country or place.
+- id: knowledge
+  label: Knowledge & Research
+  icon: book-open
+  description: Reference graphs and research sources to look things up in or enrich your own data from.
+- id: developer
+  label: Developer Tools
+  icon: terminal
+  description: Source hosting, CI and the tools for building realms themselves.
+- id: security
+  label: Security & Dependencies
+  icon: lock-key
+  description: What your software depends on, how well it is maintained and what it is exposed to.
+- id: science
+  label: Science & Environment
+  icon: planet
+  description: 'The physical world: air, sky, the grid, and medical and scientific evidence.'
+- id: productivity
+  label: Productivity
+  icon: calendar-check
+  description: Mail, meetings and the working day.
+- id: lifestyle
+  label: Lifestyle & Entertainment
+  icon: film-slate
+  description: Films, music, games, travel and hobbies.
+- id: platform
+  label: Platform
+  icon: puzzle-piece
+  description: 'Realms that extend Worlds itself: shared vocabularies and assistant personalities.'
 realms:
 - name: account-health
   source: https://github.com/embabel-worlds/realm-account-health.git

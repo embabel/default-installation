@@ -16,6 +16,7 @@ on:
   push:
     paths:
       - scripts/build-realms-index.py
+      - realm-categories.yml
       - .github/workflows/realms-index.yml
 
 permissions:
