@@ -70,6 +70,7 @@ realms:
   - support
   - billing
   maturity: experimental
+  category: customers
 - name: astrology
   source: https://github.com/embabel-worlds/realm-astrology.git
   url: https://github.com/embabel-worlds/realm-astrology
@@ -96,6 +97,7 @@ realms:
   - virtual-cypher
   - nasa
   maturity: experimental
+  category: lifestyle
 - name: au-donations
   source: https://github.com/embabel-worlds/realm-au-donations.git
   url: https://github.com/embabel-worlds/realm-au-donations
@@ -120,6 +122,7 @@ realms:
   - open-data
   - sql
   - provisioned-store
+  category: government
 - name: bible
   source: https://github.com/embabel-worlds/realm-bible.git
   url: https://github.com/embabel-worlds/realm-bible
@@ -138,6 +141,7 @@ realms:
   - reference
   - people
   maturity: experimental
+  category: knowledge
 - name: business-vocabulary
   source: https://github.com/embabel-worlds/realm-business-vocabulary.git
   url: https://github.com/embabel-worlds/realm-business-vocabulary
@@ -154,6 +158,7 @@ realms:
   - support
   - billing
   maturity: experimental
+  category: platform
 - name: ca-streets
   source: https://github.com/embabel-worlds/realm-ca-streets.git
   url: https://github.com/embabel-worlds/realm-ca-streets
@@ -177,6 +182,7 @@ realms:
   - weather
   - maps
   - apps
+  category: government
 - name: chatwoot
   source: https://github.com/embabel-worlds/realm-chatwoot.git
   url: https://github.com/embabel-worlds/realm-chatwoot
@@ -191,6 +197,7 @@ realms:
   - integrations
   - support
   maturity: experimental
+  category: customers
 - name: chess
   source: https://github.com/embabel-worlds/realm-chess.git
   url: https://github.com/embabel-worlds/realm-chess
@@ -217,6 +224,7 @@ realms:
   - apps
   - skills
   maturity: experimental
+  category: lifestyle
 - name: diffbot
   source: https://github.com/embabel-worlds/realm-diffbot.git
   url: https://github.com/embabel-worlds/realm-diffbot
@@ -236,6 +244,7 @@ realms:
   - enrichment
   - virtual-cypher
   - ownership
+  category: knowledge
 - name: doom
   source: https://github.com/embabel-worlds/realm-doom.git
   url: https://github.com/embabel-worlds/realm-doom
@@ -247,6 +256,7 @@ realms:
   - game
   - demo
   - scoreboard
+  category: lifestyle
 - name: drugtrials
   source: https://github.com/embabel-worlds/realm-drugtrials.git
   url: https://github.com/embabel-worlds/realm-drugtrials
@@ -262,6 +272,7 @@ realms:
   - virtual-cypher
   - evidence
   - health
+  category: science
 - name: email
   source: https://github.com/embabel-worlds/realm-email.git
   url: https://github.com/embabel-worlds/realm-email
@@ -276,6 +287,7 @@ realms:
   - inbox
   - attention
   - policies
+  category: productivity
 - name: esg
   source: https://github.com/embabel-worlds/realm-esg.git
   url: https://github.com/embabel-worlds/realm-esg
@@ -298,6 +310,7 @@ realms:
   - sasb
   - disclosure
   - extraction
+  category: compliance
 - name: examples
   source: https://github.com/embabel-worlds/realm-examples.git
   url: https://github.com/embabel-worlds/realm-examples
@@ -307,6 +320,7 @@ realms:
   tags:
   - examples
   - apis
+  category: developer
 - name: exposure
   source: https://github.com/embabel-worlds/realm-exposure.git
   url: https://github.com/embabel-worlds/realm-exposure
@@ -331,6 +345,7 @@ realms:
   - openapi
   - apps
   - handlers
+  category: security
 - name: filings
   source: https://github.com/embabel-worlds/realm-filings.git
   url: https://github.com/embabel-worlds/realm-filings
@@ -355,6 +370,7 @@ realms:
   - openapi
   - apps
   - handlers
+  category: compliance
 - name: fr-streets
   source: https://github.com/embabel-worlds/realm-fr-streets.git
   url: https://github.com/embabel-worlds/realm-fr-streets
@@ -394,6 +410,7 @@ realms:
   - elections
   - eurostat
   - europe
+  category: government
 - name: github
   source: https://github.com/embabel-worlds/realm-github.git
   url: https://github.com/embabel-worlds/realm-github
@@ -408,6 +425,7 @@ realms:
   - developer-tools
   - openapi
   - skills
+  category: developer
 - name: github-actions
   source: https://github.com/embabel-worlds/realm-github-actions.git
   url: https://github.com/embabel-worlds/realm-github-actions
@@ -430,6 +448,7 @@ realms:
   - openapi
   - apps
   - handlers
+  category: developer
 - name: google
   source: https://github.com/embabel-worlds/realm-google.git
   url: https://github.com/embabel-worlds/realm-google
@@ -449,6 +468,7 @@ realms:
   - docs
   - openapi
   - skills
+  category: productivity
 - name: gov-au
   source: https://github.com/embabel-worlds/realm-gov-au.git
   url: https://github.com/embabel-worlds/realm-gov-au
@@ -472,6 +492,7 @@ realms:
   - australia
   - open-data
   - transparency
+  category: government
 - name: gov-uk
   source: https://github.com/embabel-worlds/realm-gov-uk.git
   url: https://github.com/embabel-worlds/realm-gov-uk
@@ -499,6 +520,7 @@ realms:
   - united-kingdom
   - open-data
   - transparency
+  category: government
 - name: grid
   source: https://github.com/embabel-worlds/realm-grid.git
   url: https://github.com/embabel-worlds/realm-grid
@@ -523,6 +545,7 @@ realms:
   - openapi
   - apps
   - handlers
+  category: science
 - name: hubspot
   source: https://github.com/embabel-worlds/realm-hubspot.git
   url: https://github.com/embabel-worlds/realm-hubspot
@@ -541,6 +564,7 @@ realms:
   - openapi
   - skills
   maturity: experimental
+  category: customers
 - name: impromptu
   source: https://github.com/embabel-worlds/realm-impromptu.git
   url: https://github.com/embabel-worlds/realm-impromptu
@@ -564,6 +588,7 @@ realms:
   - openapi
   - skills
   - personalities
+  category: lifestyle
 - name: kyc-aml
   source: https://github.com/embabel-worlds/realm-kyc-aml.git
   url: https://github.com/embabel-worlds/realm-kyc-aml
@@ -578,6 +603,7 @@ realms:
   - aml
   - sanctions
   - compliance
+  category: compliance
 - name: lago
   source: https://github.com/embabel-worlds/realm-lago.git
   url: https://github.com/embabel-worlds/realm-lago
@@ -593,6 +619,7 @@ realms:
   - integrations
   - billing
   maturity: experimental
+  category: finance
 - name: legal
   source: https://github.com/embabel-worlds/realm-legal.git
   url: https://github.com/embabel-worlds/realm-legal
@@ -606,6 +633,7 @@ realms:
   - legal
   - contracts
   - extraction
+  category: compliance
 - name: movie
   source: https://github.com/embabel-worlds/realm-movie.git
   url: https://github.com/embabel-worlds/realm-movie
@@ -629,6 +657,7 @@ realms:
   - skills
   - personalities
   - apps
+  category: lifestyle
 - name: mtb-news
   source: https://github.com/embabel-worlds/realm-mtb-news.git
   url: https://github.com/embabel-worlds/realm-mtb-news
@@ -642,6 +671,7 @@ realms:
   - news
   - cycling
   - mountain-biking
+  category: lifestyle
 - name: night-sky
   source: https://github.com/embabel-worlds/realm-night-sky.git
   url: https://github.com/embabel-worlds/realm-night-sky
@@ -667,6 +697,7 @@ realms:
   - iss
   - openapi
   - apps
+  category: science
 - name: npm
   source: https://github.com/embabel-worlds/realm-npm.git
   url: https://github.com/embabel-worlds/realm-npm
@@ -686,6 +717,7 @@ realms:
   - adoption
   - openapi
   - oss
+  category: security
 - name: odoo
   source: https://github.com/embabel-worlds/realm-odoo.git
   url: https://github.com/embabel-worlds/realm-odoo
@@ -700,6 +732,7 @@ realms:
   - integrations
   - erp
   - crm
+  category: customers
 - name: oss-health
   source: https://github.com/embabel-worlds/realm-oss-health.git
   url: https://github.com/embabel-worlds/realm-oss-health
@@ -724,6 +757,7 @@ realms:
   - openapi
   - apps
   - handlers
+  category: security
 - name: personalities
   source: https://github.com/embabel-worlds/realm-personalities.git
   url: https://github.com/embabel-worlds/realm-personalities
@@ -733,6 +767,7 @@ realms:
   tags:
   - personalities
   - customization
+  category: platform
 - name: planet
   source: https://github.com/embabel-worlds/realm-planet.git
   url: https://github.com/embabel-worlds/realm-planet
@@ -752,6 +787,7 @@ realms:
   - earthquakes
   - openapi
   - apps
+  category: science
 - name: research
   source: https://github.com/embabel-worlds/realm-research.git
   url: https://github.com/embabel-worlds/realm-research
@@ -767,6 +803,7 @@ realms:
   - research
   - search
   - documents
+  category: knowledge
 - name: sanctions
   source: https://github.com/embabel-worlds/realm-sanctions.git
   url: https://github.com/embabel-worlds/realm-sanctions
@@ -786,6 +823,7 @@ realms:
   - risk
   - counterparty
   - ofac
+  category: compliance
 - name: sec
   source: https://github.com/embabel-worlds/realm-sec.git
   url: https://github.com/embabel-worlds/realm-sec
@@ -805,6 +843,7 @@ realms:
   - filings
   - disclosure
   - united-states
+  category: compliance
 - name: stripe
   source: https://github.com/embabel-worlds/realm-stripe.git
   url: https://github.com/embabel-worlds/realm-stripe
@@ -820,6 +859,7 @@ realms:
   - billing
   - openapi
   - skills
+  category: finance
 - name: travel
   source: https://github.com/embabel-worlds/realm-travel.git
   url: https://github.com/embabel-worlds/realm-travel
@@ -833,6 +873,7 @@ realms:
   - travel
   - planning
   - maps
+  category: lifestyle
 - name: uk-streets
   source: https://github.com/embabel-worlds/realm-uk-streets.git
   url: https://github.com/embabel-worlds/realm-uk-streets
@@ -868,6 +909,7 @@ realms:
   - open-data
   - maps
   - apps
+  category: government
 - name: wikidata
   source: https://github.com/embabel-worlds/realm-wikidata.git
   url: https://github.com/embabel-worlds/realm-wikidata
@@ -890,6 +932,7 @@ realms:
   - ownership
   - open-data
   - sparql
+  category: knowledge
 - name: zoom
   source: https://github.com/embabel-worlds/realm-zoom.git
   url: https://github.com/embabel-worlds/realm-zoom
@@ -907,3 +950,4 @@ realms:
   - openapi
   - skills
   - webhooks
+  category: productivity
