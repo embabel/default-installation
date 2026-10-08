@@ -225,6 +225,28 @@ realms:
   - skills
   maturity: experimental
   category: lifestyle
+- name: county-cricket
+  source: https://github.com/embabel-worlds/realm-county-cricket.git
+  url: https://github.com/embabel-worlds/realm-county-cricket
+  description: 'The County Championship as a graph: every match Cricsheet records, ball by ball, reduced
+    to scorecards — each team innings, every batter''s innings and every bowler''s spell — for the 2014
+    to 2026 seasons, all 18 first-class counties. Stored, not fetched: 1,483 matches, about 5,200 team
+    innings, 46,000 batting innings and 27,000 bowling spells, so a season''s leading run-scorers or a
+    bowler''s career is one query over the realm''s own rows. Results, margins, tables of wins, draws
+    and losses; batting and bowling leaders with averages, strike rates, hundreds and five-fors; a player''s
+    season-by-season record; a team''s results; head-to-head; the full scorecard of any match. What it
+    does NOT carry: official championship points (bonus points and over-rate penalties are not in the
+    ball-by-ball record), the 2020 Bob Willis Trophy, and matches before 2014. Source: Cricsheet (ODC-By).
+    Keyless.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - cricket
+  - sport
+  - county-championship
+  - statistics
+  - reference
+  maturity: experimental
 - name: diffbot
   source: https://github.com/embabel-worlds/realm-diffbot.git
   url: https://github.com/embabel-worlds/realm-diffbot
