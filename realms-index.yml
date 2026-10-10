@@ -808,8 +808,23 @@ realms:
 - name: planet
   source: https://github.com/embabel-worlds/realm-planet.git
   url: https://github.com/embabel-worlds/realm-planet
-  description: Air quality, UV and earthquakes around your places — a coordinate-keyed enrichment realm
-    for Embabel Worlds
+  description: 'The planet around your places: live air quality and UV from Open-Meteo, and recent earthquakes
+    from the USGS — both keyed on coordinates, so this realm JOINS onto anything that carries a latitude
+    and longitude. Installed beside realm-weather, every tracked WeatherLocation quietly grows a HAS_AIR
+    reading and a HAS_QUAKE neighbourhood: "which of my places has the worst air right now", "any earthquakes
+    near my places this month". Ships two typed APIs (`open_meteo_air`, `usgs`), two virtual types (AirQuality,
+    Earthquake) with composite-key joins, saved views, and the Planet Pulse app (`apps/planet-pulse.html`)
+    — a live dashboard with a seismic radar per place. No API keys and no accounts — every source is open
+    and unauthenticated, so the realm works the moment it is installed.'
+  version: 0.1.0
+  author: rod
+  tags:
+  - environment
+  - air-quality
+  - earthquakes
+  - openapi
+  - apps
+  category: science
 - name: research
   source: https://github.com/embabel-worlds/realm-research.git
   url: https://github.com/embabel-worlds/realm-research
