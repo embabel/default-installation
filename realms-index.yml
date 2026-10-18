@@ -267,6 +267,30 @@ realms:
   - virtual-cypher
   - ownership
   category: knowledge
+- name: domesday
+  source: https://github.com/embabel-worlds/realm-domesday.git
+  url: https://github.com/embabel-worlds/realm-domesday
+  description: 'Domesday Book as a graph you can query: the 1086 survey of England, entry by entry, from
+    the Hull Domesday Project''s database. Every place Domesday names (14,776, with OS grid references
+    and coordinates), every person and institution (14,042, one record per name per county), and every
+    entry of Great Domesday (18,174) with its figures — households by class, plough teams, ploughlands,
+    tax assessment in geld units, annual value in 1066 and 1086 in pence, mills, meadow, woodland, churches,
+    castles, waste — and who held it, by role: the lord in 1066, the tenant-in-chief and the tenant in
+    1086. Ask who gained and who lost at the Conquest, which counties were wasted, where the mills were.
+    Great Domesday only. Essex, Norfolk and Suffolk (Little Domesday) have places and people here but
+    no entries. The figures are parsed from Hull''s coding of the Phillimore text and reconciled against
+    Open Domesday; the agreement per field is in the README. No running text is included. Keyless. Nothing
+    to configure. Data CC BY-NC-SA (Professor J.J.N. Palmer, University of Hull).'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - domesday
+  - history
+  - medieval
+  - england
+  - reference
+  maturity: experimental
+  category: knowledge
 - name: doom
   source: https://github.com/embabel-worlds/realm-doom.git
   url: https://github.com/embabel-worlds/realm-doom
