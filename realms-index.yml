@@ -650,6 +650,28 @@ realms:
   - personalities
   maturity: experimental
   category: lifestyle
+- name: java-code
+  source: https://github.com/embabel-worlds/realm-java-code.git
+  url: https://github.com/embabel-worlds/realm-java-code
+  description: 'Any Java jar as a graph you can query, read from the jar itself when a query reaches it:
+    its packages and types (with superclass and interfaces), fields (with whether each is a map, collection,
+    array, ThreadLocal or Reference), methods, which methods read and write which fields, and which methods
+    call which - into the jar or out to the JDK and other libraries - with source lines from debug info.
+    Nothing is ingested and nothing is stored. Pin a jar by path and traverse: `MATCH (j:Jar {path:''data/jars/x.jar''})-[:HAS_TYPE]->(t:JavaType)`.
+    Paths resolve against the world''s data/ tree, an operator-trusted root, or this realm''s own directory.
+    Names are binary class names (`pkg.Outer$Inner`), exactly as heap dumps and stack traces print them,
+    so a heap realm joins types and fields by name. Bytecode only: no source is needed, and none is read.
+    Ships spring-core 6.2.18 as an example jar, with three demo views over it; every other view takes
+    any jar. Requires the appliance''s `jar` producer kind.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - java
+  - jvm
+  - bytecode
+  - code
+  - archunit
+  maturity: experimental
 - name: kyc-aml
   source: https://github.com/embabel-worlds/realm-kyc-aml.git
   url: https://github.com/embabel-worlds/realm-kyc-aml
