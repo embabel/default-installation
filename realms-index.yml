@@ -592,6 +592,31 @@ realms:
   - apps
   - handlers
   category: science
+- name: homelessness-vancouver-sydney
+  source: https://github.com/embabel-worlds/realm-homelessness-vancouver-sydney.git
+  url: https://github.com/embabel-worlds/realm-homelessness-vancouver-sydney
+  description: 'Homelessness in Vancouver and Sydney, side by side, from the counts each city actually
+    publishes — stored, so a comparison is one query over the realm''s own rows. Vancouver: the Greater
+    Vancouver point-in-time count 2005–2025 (regional, sheltered and unsheltered, by sub-region incl.
+    the City of Vancouver, 2025 survey demographics), BC Stats'' annual estimate 2019–2024, and City of
+    Vancouver shelter beds 2016–2025. Sydney: the City of Sydney street count (every February and August
+    since 2010), the NSW Statewide Street Count by LGA 2020–2026, and the ABS census estimate of homelessness
+    by operational group (Greater Sydney 2021, City of Sydney 2016 and 2021, NSW 2006–2021). Populations
+    for rates per 10,000. The two cities count different things, and the realm says so on every row: each
+    figure has its source''s tier and, only where the meaning genuinely lines up, a cross-city `compareAs`
+    family — sleepingOutside, inCrisisAccommodation, oneNightTotal. What it does NOT carry: the City of
+    Vancouver''s own off-cycle counts, Specialist Homelessness Services client data below state level,
+    demographics for Sydney''s street counts. Keyless.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - homelessness
+  - housing
+  - vancouver
+  - sydney
+  - social-statistics
+  - reference
+  maturity: experimental
 - name: hubspot
   source: https://github.com/embabel-worlds/realm-hubspot.git
   url: https://github.com/embabel-worlds/realm-hubspot
