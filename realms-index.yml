@@ -843,6 +843,17 @@ realms:
   - erp
   - crm
   category: customers
+- name: omnigraph-memory
+  source: https://github.com/embabel-worlds/realm-omnigraph-memory.git
+  url: https://github.com/embabel-worlds/realm-omnigraph-memory
+  description: 'A second memory system under the shared Memory label: facts held in an Omnigraph graph,
+    recalled by BM25 over the graph''s own stored query, so "what do you remember about X" answers from
+    the assistant''s memory and from Omnigraph in one query.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - memory
+  - omnigraph
 - name: oss-health
   source: https://github.com/embabel-worlds/realm-oss-health.git
   url: https://github.com/embabel-worlds/realm-oss-health
