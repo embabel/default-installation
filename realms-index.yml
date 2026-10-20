@@ -569,6 +569,20 @@ realms:
   - open-data
   - transparency
   category: government
+- name: graphiti-memory
+  source: https://github.com/embabel-worlds/realm-graphiti-memory.git
+  url: https://github.com/embabel-worlds/realm-graphiti-memory
+  description: 'A self-hosted Graphiti server''s temporal knowledge graph under the shared Memory label:
+    the facts Graphiti has extracted, each with the window in which it held (valid_at / invalid_at), recalled
+    through the server''s own hybrid search, so "what do you remember about X" answers from Graphiti alongside
+    the assistant''s own memory and every other system.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - memory
+  - graphiti
+  - zep
+  - temporal
 - name: grid
   source: https://github.com/embabel-worlds/realm-grid.git
   url: https://github.com/embabel-worlds/realm-grid
@@ -759,6 +773,19 @@ realms:
   - claude-code
   - openclaw
   - memory-bank
+- name: mcp-memory
+  source: https://github.com/embabel-worlds/realm-mcp-memory.git
+  url: https://github.com/embabel-worlds/realm-mcp-memory
+  description: 'The MCP memory server''s knowledge graph under the shared Memory label: the entities and
+    observations the reference `@modelcontextprotocol/server-memory` keeps in its memory.jsonl, read live,
+    one memory per entity, so "what do you remember about X" answers from the graph an MCP client has
+    been building alongside the assistant''s own memory and every other system.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - memory
+  - mcp
+  - knowledge-graph
 - name: movie
   source: https://github.com/embabel-worlds/realm-movie.git
   url: https://github.com/embabel-worlds/realm-movie
@@ -1069,6 +1096,20 @@ realms:
   - open-data
   - sparql
   category: knowledge
+- name: zep-memory
+  source: https://github.com/embabel-worlds/realm-zep-memory.git
+  url: https://github.com/embabel-worlds/realm-zep-memory
+  description: 'Zep Cloud''s temporal knowledge graph under the shared Memory label: the facts Zep has
+    extracted about a user, each with the window in which it held (valid_at / invalid_at), recalled through
+    Zep''s own graph search and ranked by its score, so "what do you remember about X" answers from Zep
+    alongside the assistant''s own memory and every other system.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - memory
+  - zep
+  - graphiti
+  - temporal
 - name: zoom
   source: https://github.com/embabel-worlds/realm-zoom.git
   url: https://github.com/embabel-worlds/realm-zoom
