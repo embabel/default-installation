@@ -1010,19 +1010,8 @@ realms:
 - name: stripe
   source: https://github.com/embabel-worlds/realm-stripe.git
   url: https://github.com/embabel-worlds/realm-stripe
-  description: Stripe — typed via a curated, vendored OpenAPI 3 spec covering the high-traffic billing
-    surface (customers, subscriptions, invoices, charges, refunds, payouts, balance, payment links). OAuth2
-    via Stripe Connect. Bundles a `stripe` Agent Skill that teaches the workflow patterns (search-by-customer,
-    MRR aggregation, dunning state, idempotency, money-as-integer-cents).
-  version: 0.2.0
-  author: Rod Johnson
-  tags:
-  - integrations
-  - finance
-  - billing
-  - openapi
-  - skills
-  category: finance
+  description: Stripe billing — curated OpenAPI 3 spec with OAuth2 via Stripe Connect. Covers customers,
+    subscriptions, invoices, charges, refunds, payouts, balance, payment links.
 - name: travel
   source: https://github.com/embabel-worlds/realm-travel.git
   url: https://github.com/embabel-worlds/realm-travel
