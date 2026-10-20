@@ -744,6 +744,21 @@ realms:
   - contracts
   - extraction
   category: compliance
+- name: markdown-memory
+  source: https://github.com/embabel-worlds/realm-markdown-memory.git
+  url: https://github.com/embabel-worlds/realm-markdown-memory
+  description: 'Markdown memory under the shared Memory label: Claude Code''s memory directory, OpenClaw''s
+    MEMORY.md and daily logs, a Cline/Roo memory bank, and plain markdown notes — each a child of MarkdownMemory,
+    read live from the world''s data/memory/ folder, so "what do you remember about X" answers from every
+    file-based memory alongside the assistant''s own and any memory service.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - memory
+  - markdown
+  - claude-code
+  - openclaw
+  - memory-bank
 - name: movie
   source: https://github.com/embabel-worlds/realm-movie.git
   url: https://github.com/embabel-worlds/realm-movie
