@@ -713,6 +713,26 @@ realms:
   - code
   - archunit
   maturity: experimental
+- name: java-source-code
+  source: https://github.com/embabel-worlds/realm-java-source-code.git
+  url: https://github.com/embabel-worlds/realm-java-source-code
+  description: 'The source code a Java jar was compiled from, reached from what realm-java-code finds
+    in the jar: a type''s file, the code at a method, a call or a field access, a method''s whole declaration,
+    and each call site with what it passes. Read where the source is, when a query reaches it - a `-sources.jar`
+    beside the jar, a mounted checkout, or a git repository at a commit - and parsed on demand. Nothing
+    is ingested and nothing is stored. Optional by design: realm-java-code answers without it, and a jar
+    with no source found answers everything but the source, with a warning saying none was found. Spans
+    say whether the source matches the jar (`matches: false` when it is another version). Ships the sources
+    of spring-core 6.2.18, matching realm-java-code''s example jar. Requires realm-java-code and the appliance''s
+    `source` producer kind.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - java
+  - jvm
+  - source
+  - code
+  maturity: experimental
 - name: kyc-aml
   source: https://github.com/embabel-worlds/realm-kyc-aml.git
   url: https://github.com/embabel-worlds/realm-kyc-aml
