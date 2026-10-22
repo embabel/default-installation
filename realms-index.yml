@@ -733,6 +733,25 @@ realms:
   - source
   - code
   maturity: experimental
+- name: jvm-logs
+  source: https://github.com/embabel-worlds/realm-jvm-logs.git
+  url: https://github.com/embabel-worlds/realm-jvm-logs
+  description: 'A JVM application''s logs and stack traces, read to the code that failed. Log files under
+    the world''s data/logs are read live as one row per event — level, logger, message, and the exception
+    it logged — and any Java stack trace, pasted or logged, is parsed into its throwables and frames.
+    Each frame finds the jar under data/jars that compiled its class, and from there the type, the method''s
+    whole declaration and the lines it was on, through realm-java-code and realm-java-source-code. Nothing
+    is ingested and nothing is stored. Requires realm-java-code and realm-java-source-code, and the appliance''s
+    `stacktrace` producer kind and `files` producer with `unit: event`.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - java
+  - jvm
+  - logs
+  - stacktrace
+  - code
+  maturity: experimental
 - name: kyc-aml
   source: https://github.com/embabel-worlds/realm-kyc-aml.git
   url: https://github.com/embabel-worlds/realm-kyc-aml
