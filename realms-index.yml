@@ -733,6 +733,23 @@ realms:
   - source
   - code
   maturity: experimental
+- name: jheapo
+  source: https://github.com/embabel-worlds/realm-jheapo.git
+  url: https://github.com/embabel-worlds/realm-jheapo
+  description: 'A Java heap dump analysed by jheapo, reached over jheapo''s REST interface: the analysis
+    tabs (overview, histogram, retention, waste, strings, threads, ...) and the drill-downs that walk
+    the heap — a class''s instances, an object''s holders, fields and chain to a GC root, retained classes,
+    leak suspects, the dominator tree. Nothing is copied into the graph. Requires a jheapo serving REST
+    (`bin/jheapo-rest.sh <dump.hprof>`, port 7071) reachable from the appliance; drill-downs need a licensed
+    jheapo.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - java
+  - jvm
+  - heap
+  - memory
+  maturity: experimental
 - name: jvm-logs
   source: https://github.com/embabel-worlds/realm-jvm-logs.git
   url: https://github.com/embabel-worlds/realm-jvm-logs
