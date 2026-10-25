@@ -133,7 +133,7 @@ realms:
     come from Theographic Bible Metadata: 3,069 of them, joined to the verses that mention them and to
     their fathers and mothers. A name is not a person — there are 26 Zechariahs — so ask by name and expect
     every bearer. Keyless. Nothing to configure.'
-  version: 0.1.0
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - bible
@@ -142,6 +142,25 @@ realms:
   - people
   maturity: experimental
   category: knowledge
+- name: book-of-mormon
+  source: https://github.com/embabel-worlds/realm-book-of-mormon.git
+  url: https://github.com/embabel-worlds/realm-book-of-mormon
+  description: 'The Book of Mormon as a graph you can query: every verse of its fifteen books, 1 Nephi
+    to Moroni, with the headings printed in the text since 1830. Read a verse or a chapter, search it,
+    see what each book holds, and find where it quotes the Bible — twenty-one chapters of Isaiah, the
+    Sermon on the Mount, Malachi — verse by verse. With realm-bible installed, each quoting verse is joined
+    to the King James verse it quotes by CORRESPONDS_TO, so a quoted chapter reads beside its source and
+    the differences show. A child of the scripture vocabulary: a BomVerse is a Verse, so a question asked
+    of every scripture is answered here too. Keyless. Nothing to configure. Text public domain, from bcbooks/scriptures-json;
+    no copyrighted chapter summaries or footnotes.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - book-of-mormon
+  - scripture
+  - latter-day-saint
+  - reference
+  maturity: experimental
 - name: business-vocabulary
   source: https://github.com/embabel-worlds/realm-business-vocabulary.git
   url: https://github.com/embabel-worlds/realm-business-vocabulary
@@ -800,6 +819,28 @@ realms:
   - billing
   maturity: experimental
   category: finance
+- name: lds-scriptures
+  source: https://github.com/embabel-worlds/realm-lds-scriptures.git
+  url: https://github.com/embabel-worlds/realm-lds-scriptures
+  description: 'The Doctrine and Covenants and the Pearl of Great Price as a graph you can query — the
+    two books of Latter-day Saint scripture beside the Book of Mormon. Every verse of the 138 sections,
+    and of Moses, Abraham, Joseph Smith—Matthew, Joseph Smith—History and the Articles of Faith. Read
+    a verse or a section, search either, and find where they draw on the Bible: Moses retells Genesis
+    1–6, Joseph Smith—Matthew retells Matthew 24, and the sections quote and echo the New Testament throughout.
+    With realm-bible installed, each verse that quotes or echoes the King James is joined to it by CORRESPONDS_TO,
+    so a chapter reads beside its source and the differences show. A child of the scripture vocabulary:
+    two holy books, each its own scripture, so a question asked of every scripture answers for each. Keyless.
+    Nothing to configure. Text public domain, from bcbooks/scriptures-json; no copyrighted introductions,
+    headings, footnotes or Official Declarations.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - doctrine-and-covenants
+  - pearl-of-great-price
+  - scripture
+  - latter-day-saint
+  - reference
+  maturity: experimental
 - name: legal
   source: https://github.com/embabel-worlds/realm-legal.git
   url: https://github.com/embabel-worlds/realm-legal
@@ -1007,6 +1048,24 @@ realms:
   - openapi
   - apps
   category: science
+- name: quran
+  source: https://github.com/embabel-worlds/realm-quran.git
+  url: https://github.com/embabel-worlds/realm-quran
+  description: 'The Quran as a graph you can query. Every ayah of the 114 surahs is stored with three
+    texts: the Arabic in Uthmani script (the Quran itself), the same Arabic without diacritics for searching,
+    and Pickthall''s English (1930), a translation of the meaning. Read an ayah or a surah, search in
+    English or Arabic, list the surahs in the order of the mushaf or of revelation, and see what each
+    of the thirty ajza holds. A child of the scripture vocabulary: an Ayah is a Verse, so a question asked
+    of every scripture — which verses speak of mercy — is answered here and in the Bible alike. Keyless.
+    Nothing to configure. Arabic text from the Tanzil Project (tanzil.net), CC BY 3.0, verbatim.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - quran
+  - scripture
+  - islam
+  - reference
+  maturity: experimental
 - name: research
   source: https://github.com/embabel-worlds/realm-research.git
   url: https://github.com/embabel-worlds/realm-research
@@ -1043,6 +1102,22 @@ realms:
   - counterparty
   - ofac
   category: compliance
+- name: scripture-vocabulary
+  source: https://github.com/embabel-worlds/realm-scripture-vocabulary.git
+  url: https://github.com/embabel-worlds/realm-scripture-vocabulary
+  description: The words every scripture shares, whichever scripture it is. Parent types only — a holy
+    book, a book within it, a chapter, a verse, a portion read on a cycle — with no producers and no data
+    of its own. A realm over one scripture (the Bible, the Quran, the Tanakh, the Book of Mormon) declares
+    its own types as children of these, so a question asked about Verse is answered by every scripture
+    installed, and `MATCH (v:Quran:Verse)` still asks one.
+  version: 0.3.0
+  author: Rod Johnson
+  tags:
+  - vocabulary
+  - scripture
+  - religion
+  - reference
+  maturity: experimental
 - name: sec
   source: https://github.com/embabel-worlds/realm-sec.git
   url: https://github.com/embabel-worlds/realm-sec
@@ -1079,6 +1154,29 @@ realms:
   - openapi
   - skills
   category: finance
+- name: tanakh
+  source: https://github.com/embabel-worlds/realm-tanakh.git
+  url: https://github.com/embabel-worlds/realm-tanakh
+  description: 'The Tanakh — the Hebrew Bible, Torah, Prophets and Writings — as a graph you can query.
+    Every verse is stored with three texts: the Hebrew with vowel points, the same Hebrew unpointed for
+    searching, and the JPS 1917 English. Read a verse or a chapter, search in English or Hebrew, browse
+    the thirty-nine books in Hebrew order, and walk the fifty-four weekly Torah portions. Numbering is
+    Hebrew, the Tanakh''s own: a psalm''s title is its first verse, and Malachi has three chapters. Each
+    verse names the King James verse that holds the same text, and with realm-bible installed the two
+    are joined by CORRESPONDS_TO, so any chapter can be read beside its King James rendering however the
+    two number it. A child of the scripture vocabulary: a TanakhVerse is a Verse, so a question asked
+    of every scripture is answered here too. Keyless. Nothing to configure. Texts public domain, from
+    Sefaria.'
+  version: 0.2.0
+  author: Rod Johnson
+  tags:
+  - tanakh
+  - torah
+  - scripture
+  - judaism
+  - hebrew
+  - reference
+  maturity: experimental
 - name: travel
   source: https://github.com/embabel-worlds/realm-travel.git
   url: https://github.com/embabel-worlds/realm-travel
