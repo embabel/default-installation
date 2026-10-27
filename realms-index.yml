@@ -1071,6 +1071,39 @@ realms:
   - openapi
   - apps
   category: science
+- name: polyglot-code
+  source: https://github.com/embabel-worlds/realm-polyglot-code.git
+  url: https://github.com/embabel-worlds/realm-polyglot-code
+  description: 'Any codebase, in fourteen languages, as one graph you can query — read where it lives
+    when a question reaches it. TypeScript (and TSX), JavaScript (and JSX), Python, Go, Rust, C, C++,
+    C#, Ruby, PHP, Kotlin, Scala and Swift are parsed with tree-sitter; Java with a parser that resolves
+    types. Every language''s files, declarations, imports and calls are children of the same standard-model
+    parents, so one query spans a Python backend and its TypeScript frontend: MATCH (p:CodeProject {key:
+    ''https://github.com/acme/shop''})-[:DECLARES]->(d:SourceDeclaration {name: ''Order''}) RETURN d.language,
+    d.kind, d.path, d.fromLine Views answer what a developer asks of an unfamiliar repository: what it
+    is written in, every HTTP endpoint it serves in any framework (Routes, matched by route styles kept
+    as data), where a name is defined, who calls it, what names its languages share, what it imports,
+    how much is documented, and where the longest functions are. Name the project by a key: a repository,
+    `https://github.com/acme/shop@main` (the default branch without `@ref`), or a folder under the world''s
+    data/ or in the workspace the appliance owner mounted. Nothing is ingested and nothing is stored:
+    a commit is read once and kept; a folder is read afresh. Calls outside Java are matched by name (`resolution:
+    name`), and say so. Requires the appliance''s `source-tree` and `source` (`from: project`) producer
+    kinds.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - code
+  - source
+  - typescript
+  - python
+  - go
+  - rust
+  - csharp
+  - kotlin
+  - java
+  - polyglot
+  - tree-sitter
+  maturity: experimental
 - name: quran
   source: https://github.com/embabel-worlds/realm-quran.git
   url: https://github.com/embabel-worlds/realm-quran
