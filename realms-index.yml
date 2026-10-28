@@ -244,6 +244,26 @@ realms:
   - skills
   maturity: experimental
   category: lifestyle
+- name: code-model
+  source: https://github.com/embabel-worlds/realm-code-model.git
+  url: https://github.com/embabel-worlds/realm-code-model
+  description: 'The shared vocabulary of code, for every realm that reads it: files, declarations, imports,
+    calls, local variables, stack frames and thrown exceptions (Source, SourceDeclaration, SourceImport,
+    CallSite, …), and the artifacts, dependencies and licences a build declares (Artifact, Dependency,
+    Licence). It declares parent types only, with the properties every language''s rows carry under those
+    names, and no producers: a language realm brings its own children and joins, and a query that names
+    a parent here is answered by every installed language at once. Install it alongside a code realm (polyglot-code,
+    java-project, java-source-code, java-code, jvm-logs). Without it, those realms load but their types
+    lose these parents, so a query on SourceDeclaration finds nothing. It brings no data and costs nothing
+    when no code realm is installed, which is why it is a realm of its own rather than part of every world.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - code
+  - source
+  - model
+  - shared-types
+  maturity: experimental
 - name: county-cricket
   source: https://github.com/embabel-worlds/realm-county-cricket.git
   url: https://github.com/embabel-worlds/realm-county-cricket
