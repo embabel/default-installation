@@ -766,8 +766,8 @@ realms:
     MATCH (p:JavaProject {key: ''https://github.com/acme/shop''})-[:DECLARES_TYPE]->(t:JavaProjectType)
     … Nothing is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh.
     It knows no framework — an annotation is its name and its attributes as written — which is what a
-    framework''s realm (realm-spring) gives meaning. Requires the appliance''s `source` (`from: project`)
-    and `maven` (`from: project`) producer kinds.'
+    framework''s realm (realm-spring) gives meaning. Requires the appliance''s `source-tree` and `maven`
+    (`from: project`) producer kinds.'
   version: 0.1.0
   author: Embabel
   tags:
@@ -788,7 +788,7 @@ realms:
     with no source found answers everything but the source, with a warning saying none was found. Spans
     say whether the source matches the jar (`matches: false` when it is another version). Ships the sources
     of spring-core 6.2.18, matching realm-java-code''s example jar. Requires realm-java-code and the appliance''s
-    `source` producer kind.'
+    `source-tree` producer kind (`from: jar`).'
   version: 0.1.0
   author: Rod Johnson
   tags:
@@ -1099,8 +1099,8 @@ realms:
   url: https://github.com/embabel-worlds/realm-polyglot-code
   description: 'Any codebase, in fourteen languages, as one graph you can query — read where it lives
     when a question reaches it. TypeScript (and TSX), JavaScript (and JSX), Python, Go, Rust, C, C++,
-    C#, Ruby, PHP, Kotlin, Scala and Swift are parsed with tree-sitter; Java with a parser that resolves
-    types. Every language''s files, declarations, imports and calls are children of the same standard-model
+    C#, Ruby, PHP, Kotlin, Scala, Swift and Java are parsed with tree-sitter, Java''s names resolved by
+    binary name. Every language''s files, declarations, imports and calls are children of the same standard-model
     parents, so one query spans a Python backend and its TypeScript frontend: MATCH (p:CodeProject {key:
     ''https://github.com/acme/shop''})-[:DECLARES]->(d:SourceDeclaration {name: ''Order''}) RETURN d.language,
     d.kind, d.path, d.fromLine Views answer what a developer asks of an unfamiliar repository: what it
@@ -1113,7 +1113,7 @@ realms:
     `@ref`), or a folder under the world''s data/ or in the workspace the appliance owner mounted. Nothing
     is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh. Calls
     outside Java are matched by name (`resolution: name`), and say so. Requires the appliance''s `source-tree`
-    and `source` (`from: project`) producer kinds.'
+    producer kind.'
   version: 0.1.0
   author: Embabel
   tags:
