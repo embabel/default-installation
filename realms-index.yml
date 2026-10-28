@@ -737,7 +737,9 @@ realms:
     its packages and types (with superclass and interfaces), fields (with whether each is a map, collection,
     array, ThreadLocal or Reference), methods, which methods read and write which fields, and which methods
     call which - into the jar or out to the JDK and other libraries - with source lines from debug info.
-    Nothing is ingested and nothing is stored. Pin a jar by path and traverse: `MATCH (j:Jar {path:''data/jars/x.jar''})-[:HAS_TYPE]->(t:JavaType)`.
+    And what the program casts at run time: every checkcast and instanceof, by method and line, and each
+    method''s branches, loops, switches and handlers as compiled. Nothing is ingested and nothing is stored.
+    Pin a jar by path and traverse: `MATCH (j:Jar {path:''data/jars/x.jar''})-[:HAS_TYPE]->(t:JavaType)`.
     Paths resolve against the world''s data/ tree, an operator-trusted root, or this realm''s own directory.
     Names are binary class names (`pkg.Outer$Inner`), exactly as heap dumps and stack traces print them,
     so a heap realm joins types and fields by name. Bytecode only: no source is needed, and none is read.
@@ -801,11 +803,12 @@ realms:
   description: 'A Java heap dump analysed by jheapo, reached over jheapo''s REST interface: the analysis
     tabs (overview, histogram, retention, waste, strings, threads, ...) and the drill-downs that walk
     the heap — a class''s instances, an object''s holders, fields and chain to a GC root, retained classes,
-    leak suspects, the dominator tree. Nothing is copied into the graph. Requires a jheapo serving REST
-    (`bin/jheapo-rest.sh <dump.hprof>`, port 7071) reachable from the appliance; drill-downs need a licensed
-    jheapo.'
-  version: 0.1.0
-  author: Rod Johnson
+    leak suspects, the dominator tree. Nothing is copied into the graph. Given the application''s jar
+    (a view''s `jar` param), every finding carries on into that jar''s code and source, through realm-java-code
+    and realm-java-source-code; no jar is named in the realm. Requires a jheapo serving REST (`bin/jheapo-rest.sh
+    <dump.hprof>`, port 7071) reachable from the appliance; drill-downs need a licensed jheapo.'
+  version: 0.2.0
+  author: Kirk Pepperdine
   tags:
   - java
   - jvm
