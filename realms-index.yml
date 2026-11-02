@@ -366,14 +366,18 @@ realms:
   description: 'Abstract-inbox realm — declares the `email.thread` DomainType and the attention-worthiness
     rules (deterministic and LLM-judged) that operate on it. Provider-agnostic: any inbox integration
     (in-tree Gmail today, future realm-exchange / realm-imap) whose signals satisfy `email.thread` benefits
-    from these rules without per-provider duplication.'
-  version: 0.1.0
+    from these rules without per-provider duplication. Also ships the views over what an inbox brings
+    a world — the people you correspond with (the EMAILED edge) and the facts the assistant has learned
+    (DICE propositions) — so they are listed where that data can exist.'
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - email
   - inbox
   - attention
   - policies
+  - correspondents
+  - memory
   category: productivity
 - name: esg
   source: https://github.com/embabel-worlds/realm-esg.git
