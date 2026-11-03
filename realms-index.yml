@@ -405,13 +405,7 @@ realms:
 - name: examples
   source: https://github.com/embabel-worlds/realm-examples.git
   url: https://github.com/embabel-worlds/realm-examples
-  description: Example APIs — Petstore (OpenAPI), xkcd (OpenAPI), Rick and Morty (GraphQL)
-  version: 0.1.0
-  author: Embabel
-  tags:
-  - examples
-  - apis
-  category: developer
+  description: Example API integrations pack for Embabel Me — Petstore, xkcd, Rick and Morty
 - name: exposure
   source: https://github.com/embabel-worlds/realm-exposure.git
   url: https://github.com/embabel-worlds/realm-exposure
