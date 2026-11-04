@@ -220,30 +220,8 @@ realms:
 - name: chess
   source: https://github.com/embabel-worlds/realm-chess.git
   url: https://github.com/embabel-worlds/realm-chess
-  description: 'A chessboard, a strong engine, and the plans a position calls for. Stockfish 19 — compiled
-    to WebAssembly, running in the appliance''s own sandbox — gives the best lines. The position''s imbalances,
-    in Jeremy Silman''s sense, are computed from the board: material, the minor pieces, pawn structure,
-    space, files, outposts, development, king safety. The Lichess opening book names it — along the game''s
-    moves, so a line keeps its name long after it leaves the book — and the Chess Opening Theory wikibook
-    (CC BY-SA 4.0) says what theory holds along the line. A model with the chess-plans skill then decides
-    the plans for both sides from those facts — the King''s Indian Classical and Samisch, or the Exchange
-    and closed Ruy Lopez, call for opposite plans, and the skill knows which. Everything is a Virtual
-    Cypher hop from a pinned Position (HAS_IMBALANCES, IN_OPENING, HAS_CANDIDATE, HAS_PLAN) or GameLine
-    (IN_OPENING, HAS_THEORY, HAS_PLAN), so the analysis is a query and a REST call, not only a page. No
-    key needed for any of that. With a Lichess token — which the realm asks for, and can do without —
-    it also shows what masters played in a position, and what any Lichess player has chosen there, with
-    results. The engine is GPL-3.0, and so is this realm.'
-  version: 0.4.0
-  author: Rod Johnson
-  tags:
-  - chess
-  - games
-  - engine
-  - virtual-cypher
-  - apps
-  - skills
-  maturity: experimental
-  category: lifestyle
+  description: A chessboard, Stockfish on the server, and the plans behind its best moves — as an Embabel
+    realm
 - name: code-model
   source: https://github.com/embabel-worlds/realm-code-model.git
   url: https://github.com/embabel-worlds/realm-code-model
