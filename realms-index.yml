@@ -264,6 +264,23 @@ realms:
   - statistics
   - reference
   maturity: experimental
+- name: dev-vocabulary
+  source: https://github.com/embabel-worlds/realm-dev-vocabulary.git
+  url: https://github.com/embabel-worlds/realm-dev-vocabulary
+  description: The words software teams use for their work, whatever forge or tracker keeps it. Parent
+    types only — an issue, a change request, a comment, a review, a commit, a file change, a build, a
+    repository — with no producers, no views and no vendor. A realm over GitHub, GitLab, Bitbucket or
+    Jira declares its own types as children of these, so a question asked about Issue is answered by whichever
+    tracker is installed, and keeps being answered when it is replaced. Every record says who wrote it
+    and whether that was a person, a bot, a coding agent, or a person with an agent's help, so the questions
+    nobody can answer today — what share of review comments are machine-written, who breaks the build
+    — are one GROUP BY.
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - vocabulary
+  - developer-tools
+  maturity: experimental
 - name: diffbot
   source: https://github.com/embabel-worlds/realm-diffbot.git
   url: https://github.com/embabel-worlds/realm-diffbot
