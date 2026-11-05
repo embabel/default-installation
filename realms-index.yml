@@ -500,11 +500,13 @@ realms:
 - name: github
   source: https://github.com/embabel-worlds/realm-github.git
   url: https://github.com/embabel-worlds/realm-github
-  description: GitHub integration — typed via the official OpenAPI 3 spec, so the LLM sees full request
-    AND response types and doesn't have to guess pagination shape, field names, or wrapper-vs-array. Bundles
+  description: GitHub integration — a GitHubIssue is an Issue and a GitHubPullRequest a ChangeRequest
+    of the dev vocabulary (realm-dev-vocabulary, installed first), each saying whether a person, a bot
+    or a coding agent wrote it. Typed via the official OpenAPI 3 spec, so the LLM sees full request AND
+    response types and doesn't have to guess pagination shape, field names, or wrapper-vs-array. Bundles
     a `github-workflows` Agent Skill that teaches the workflow patterns (search-then-get, paginate safely,
     common pitfalls) — invaluable for smaller chat models.
-  version: 0.5.0
+  version: 0.6.0
   author: Rod Johnson
   tags:
   - integrations
