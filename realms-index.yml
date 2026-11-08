@@ -275,7 +275,7 @@ realms:
     and whether that was a person, a bot, a coding agent, or a person with an agent's help, so the questions
     nobody can answer today — what share of review comments are machine-written, who breaks the build
     — are one GROUP BY.
-  version: 0.2.0
+  version: 0.3.0
   author: Rod Johnson
   tags:
   - vocabulary
