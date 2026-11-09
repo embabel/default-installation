@@ -506,7 +506,7 @@ realms:
     response types and doesn't have to guess pagination shape, field names, or wrapper-vs-array. Bundles
     a `github-workflows` Agent Skill that teaches the workflow patterns (search-then-get, paginate safely,
     common pitfalls) — invaluable for smaller chat models.
-  version: 0.7.0
+  version: 0.8.0
   author: Rod Johnson
   tags:
   - integrations
@@ -527,7 +527,7 @@ realms:
     ones need a token granted on them. Pin a repository as GitHubRepository {full_name:''owner/repo''}
     and traverse. The anchor is the same label realm-github uses, so a world with both installed sees
     issues and workflow runs on one node.'
-  version: 0.2.0
+  version: 0.3.0
   author: Rod Johnson
   tags:
   - github
