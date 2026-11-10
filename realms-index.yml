@@ -60,9 +60,10 @@ realms:
   url: https://github.com/embabel-worlds/realm-account-health
   description: 'Which customers are in trouble, which are ready for more, and what the CRM does not know
     about them — read across a CRM, a helpdesk and a billing system through the business vocabulary (realm-business-vocabulary),
-    naming no product. Every view starts at a CustomerAccount, the spine each product realm keys, so the
-    same views answer whether the CRM is Odoo or something else. Nothing is stored: each answer is read
-    from the three systems when it is asked for.'
+    naming no product. Every view, rule and judgement is written against the vocabulary''s types, edges
+    and properties and joins on the CustomerAccount spine, so the same answers come from whichever CRM,
+    helpdesk and billing system the world has. Nothing is stored: each answer is read from the three systems
+    when it is asked for.'
   version: 0.1.0
   author: Rod Johnson
   tags:
