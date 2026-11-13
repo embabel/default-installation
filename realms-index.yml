@@ -433,6 +433,29 @@ realms:
   - apps
   - handlers
   category: security
+- name: fibo-gleif
+  source: https://github.com/embabel-worlds/realm-fibo-gleif.git
+  url: https://github.com/embabel-worlds/realm-fibo-gleif
+  description: 'Legal entities in FIBO''s vocabulary, bound to the GLEIF register and OFAC''s sanctions
+    lists. Anchor a legal entity by LEI (`MATCH (e:LegalEntity {lei: ''549300G81RQKP7XW2N18''})`) and
+    walk IS_SUBSIDIARY_OF (FIBO''s isSubsidiaryOf, evidenced by GLEIF''s IS_DIRECTLY_CONSOLIDATED_BY relationship
+    records) up to the ultimate parent, each hop citing the GLEIF record that asserts it; read the consolidation
+    record (since when, under which accounting standard, how corroborated) or the reporting exception
+    that says why no parent is given; and join any name on the chain, legal or alternative, to OFAC''s
+    SDN list and its aliases, with the match quality shown. Subsidiary and ControllingAffiliate are FIBO
+    roles concluded by rules; SanctionsExposed propagates up the chain. Nothing is copied: GLEIF answers
+    per LEI, cached for a day; OFAC''s files are read once a day. GLEIF data is CC0; OFAC''s lists are
+    US public domain; FIBO is MIT.'
+  version: 0.1.0
+  author: Embabel
+  tags:
+  - finance
+  - fibo
+  - gleif
+  - ontology
+  - sanctions
+  - legal-entities
+  maturity: experimental
 - name: filings
   source: https://github.com/embabel-worlds/realm-filings.git
   url: https://github.com/embabel-worlds/realm-filings
