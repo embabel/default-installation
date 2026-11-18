@@ -521,6 +521,31 @@ realms:
   - eurostat
   - europe
   category: government
+- name: git
+  source: https://github.com/embabel-worlds/realm-git.git
+  url: https://github.com/embabel-worlds/realm-git
+  description: 'A git repository''s history as a graph you can query, read from a clone when a query reaches
+    it: its commits (who wrote each, when, with whose help), the files each one changed, and who last
+    changed each line of a file. Nothing is ingested and nothing is stored. Pin a project and traverse:
+    `MATCH (p:GitProject {key:''https://github.com/acme/shop''})-[:HAS_COMMIT]->(c:GitCommit)`. A project
+    is a repository URL, optionally `@` a commit, tag or branch, or a folder that holds a `.git` directory:
+    the same keys the code realms read a project by. It works for any host and for a repository that exists
+    only on disk; no forge''s API is called. Every commit says what it touched, so it can be characterised
+    without reading a file: a Java change, configuration, documentation, tests, or a mixture. Every file
+    a commit changed carries the dev vocabulary''s kind (source, test, docs, build, config, data, other)
+    and its language. A GitCommit is a Commit and a GitFileChange a FileChange of the dev vocabulary,
+    so a view written against the vocabulary reads git as it reads a forge, and a commit here is the commit
+    realm-github links to its pull request: both carry the same `key`. Requires realm-dev-vocabulary and
+    the appliance''s `git` producer kind.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - git
+  - developer-tools
+  - code
+  - history
+  maturity: experimental
+  category: developer
 - name: github
   source: https://github.com/embabel-worlds/realm-github.git
   url: https://github.com/embabel-worlds/realm-github
@@ -859,6 +884,26 @@ realms:
   - stacktrace
   - code
   maturity: experimental
+- name: kubernetes
+  source: https://github.com/embabel-worlds/realm-kubernetes.git
+  url: https://github.com/embabel-worlds/realm-kubernetes
+  description: 'A Kubernetes cluster as a graph you can query, read live from the cluster''s own API when
+    a question reaches it: what is running in a namespace, on how many pods, at which image and version,
+    which pods are crashing and why, and what the cluster says went wrong. Nothing is copied into the
+    graph. A pod lives for minutes, so pods, containers, deployments and events are fetched for the namespace
+    a query names and are gone when it ends. Pin a namespace and traverse: `MATCH (n:KubeNamespace {name:''shop''})-[:HAS_POD]->(p:KubePod)`.
+    Read-only. It lists; it never changes the cluster, and it never reads a Secret. Give its service account
+    the built-in `view` role. A pod carries the image it runs by digest and the version its labels claim,
+    which is how a running container is traced to the commit that built it.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - kubernetes
+  - operations
+  - developer-tools
+  - openapi
+  maturity: experimental
+  category: developer
 - name: kyc-aml
   source: https://github.com/embabel-worlds/realm-kyc-aml.git
   url: https://github.com/embabel-worlds/realm-kyc-aml
@@ -1362,6 +1407,27 @@ realms:
   - maps
   - apps
   category: government
+- name: which-change
+  source: https://github.com/embabel-worlds/realm-which-change.git
+  url: https://github.com/embabel-worlds/realm-which-change
+  description: 'Which change broke production? From a failure in a Java service''s logs to the line that
+    threw it, the commit that last changed that line, who wrote it and whether a coding agent helped,
+    and the pull request that brought it in. One query, with nothing installed in the application. It
+    adds no data of its own. Its views join realms that each know one thing: realm-jvm-logs (the failure
+    and its stack trace), realm-polyglot-code (the repository''s files), realm-git (who last changed each
+    line), realm-github (the pull request) and realm-kubernetes (what is running, at which commit). No
+    jar is needed: the application''s own code is whichever stack frame names a file that is in the repository
+    at the commit that was running. Requires realm-jvm-logs, realm-polyglot-code, realm-git, realm-github,
+    realm-kubernetes and realm-dev-vocabulary.'
+  version: 0.1.0
+  author: Rod Johnson
+  tags:
+  - developer-tools
+  - operations
+  - java
+  - git
+  maturity: experimental
+  category: developer
 - name: wikidata
   source: https://github.com/embabel-worlds/realm-wikidata.git
   url: https://github.com/embabel-worlds/realm-wikidata
