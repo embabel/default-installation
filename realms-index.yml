@@ -1418,7 +1418,8 @@ realms:
     line), realm-github (the pull request) and realm-kubernetes (what is running, at which commit). No
     jar is needed: the application''s own code is whichever stack frame names a file that is in the repository
     at the commit that was running. Requires realm-jvm-logs, realm-polyglot-code, realm-git, realm-github,
-    realm-kubernetes and realm-dev-vocabulary.'
+    realm-kubernetes and realm-dev-vocabulary. With realm-elastic-logs installed, WhatBrokeFromLogs runs
+    the same chain from the log store: counted over every event, and still there after the pod is gone.'
   version: 0.1.0
   author: Rod Johnson
   tags:
