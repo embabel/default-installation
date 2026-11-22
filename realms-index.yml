@@ -170,7 +170,7 @@ realms:
     no producers, no views and no vendor. A realm over a CRM, a helpdesk or a billing system declares
     its own types as children of these, so a question asked about SupportCase is answered by whichever
     helpdesk is installed, and keeps being answered when it is replaced.
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - vocabulary
@@ -928,7 +928,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - integrations
