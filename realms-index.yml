@@ -928,7 +928,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.1.2
+  version: 0.1.3
   author: Rod Johnson
   tags:
   - integrations
@@ -1093,7 +1093,7 @@ realms:
     nothing here is guessed), producers with domain pushdown, and a bundled skill that teaches a coding
     agent to extend the realm for a customer's custom modules by reading fields_get through this same
     API.
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - integrations
