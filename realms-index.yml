@@ -276,7 +276,7 @@ realms:
     and whether that was a person, a bot, a coding agent, or a person with an agent's help, so the questions
     nobody can answer today — what share of review comments are machine-written, who breaks the build
     — are one GROUP BY.
-  version: 0.3.0
+  version: 0.3.1
   author: Rod Johnson
   tags:
   - vocabulary
@@ -524,20 +524,21 @@ realms:
 - name: git
   source: https://github.com/embabel-worlds/realm-git.git
   url: https://github.com/embabel-worlds/realm-git
-  description: 'A git repository''s history as a graph you can query, read from a clone when a query reaches
-    it: its commits (who wrote each, when, with whose help), the files each one changed, and who last
-    changed each line of a file. Nothing is ingested and nothing is stored. Pin a project and traverse:
-    `MATCH (p:GitProject {key:''https://github.com/acme/shop''})-[:HAS_COMMIT]->(c:GitCommit)`. A project
-    is a repository URL, optionally `@` a commit, tag or branch, or a folder that holds a `.git` directory:
-    the same keys the code realms read a project by. It works for any host and for a repository that exists
-    only on disk; no forge''s API is called. Every commit says what it touched, so it can be characterised
-    without reading a file: a Java change, configuration, documentation, tests, or a mixture. Every file
-    a commit changed carries the dev vocabulary''s kind (source, test, docs, build, config, data, other)
-    and its language. A GitCommit is a Commit and a GitFileChange a FileChange of the dev vocabulary,
-    so a view written against the vocabulary reads git as it reads a forge, and a commit here is the commit
-    realm-github links to its pull request: both carry the same `key`. Requires realm-dev-vocabulary and
-    the appliance''s `git` producer kind.'
-  version: 0.1.0
+  description: 'A git repository''s commits, changed files and line-by-line blame, read live from a clone.
+    The history as a graph you can query, read from a clone when a query reaches it: its commits (who
+    wrote each, when, with whose help), the files each one changed, and who last changed each line of
+    a file. Nothing is ingested and nothing is stored. Pin a project and traverse: `MATCH (p:GitProject
+    {key:''https://github.com/acme/shop''})-[:HAS_COMMIT]->(c:GitCommit)`. A project is a repository URL,
+    optionally `@` a commit, tag or branch, or a folder that holds a `.git` directory: the same keys the
+    code realms read a project by. It works for any host and for a repository that exists only on disk;
+    no forge''s API is called. Every commit says what it touched, so it can be characterised without reading
+    a file: a Java change, configuration, documentation, tests, or a mixture. Every file a commit changed
+    carries the dev vocabulary''s kind (source, test, docs, build, config, data, other) and its language.
+    A GitCommit is a Commit and a GitFileChange a FileChange of the dev vocabulary, so a view written
+    against the vocabulary reads git as it reads a forge, and a commit here is the commit realm-github
+    links to its pull request: both carry the same `key`. Requires realm-dev-vocabulary and the appliance''s
+    `git` producer kind.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - git
@@ -928,7 +929,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.1.4
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - integrations
