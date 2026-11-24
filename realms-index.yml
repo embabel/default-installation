@@ -446,7 +446,7 @@ realms:
     roles concluded by rules; SanctionsExposed propagates up the chain. Nothing is copied: GLEIF answers
     per LEI, cached for a day; OFAC''s files are read once a day. GLEIF data is CC0; OFAC''s lists are
     US public domain; FIBO is MIT.'
-  version: 0.1.0
+  version: 0.1.1
   author: Embabel
   tags:
   - finance
@@ -538,7 +538,7 @@ realms:
     against the vocabulary reads git as it reads a forge, and a commit here is the commit realm-github
     links to its pull request: both carry the same `key`. Requires realm-dev-vocabulary and the appliance''s
     `git` producer kind.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - git
@@ -556,7 +556,7 @@ realms:
     response types and doesn't have to guess pagination shape, field names, or wrapper-vs-array. Bundles
     a `github-workflows` Agent Skill that teaches the workflow patterns (search-then-get, paginate safely,
     common pitfalls) — invaluable for smaller chat models.
-  version: 0.9.1
+  version: 0.9.2
   author: Rod Johnson
   tags:
   - integrations
@@ -888,7 +888,8 @@ realms:
 - name: kubernetes
   source: https://github.com/embabel-worlds/realm-kubernetes.git
   url: https://github.com/embabel-worlds/realm-kubernetes
-  description: 'A Kubernetes cluster as a graph you can query, read live from the cluster''s own API when
+  description: 'Kubernetes pods, deployments, events and pod logs, read live from the cluster''s API per
+    namespace. A Kubernetes cluster as a graph you can query, read live from the cluster''s own API when
     a question reaches it: what is running in a namespace, on how many pods, at which image and version,
     which pods are crashing and why, and what the cluster says went wrong. Nothing is copied into the
     graph. A pod lives for minutes, so pods, containers, deployments and events are fetched for the namespace
@@ -896,7 +897,7 @@ realms:
     Read-only. It lists; it never changes the cluster, and it never reads a Secret. Give its service account
     the built-in `view` role. A pod carries the image it runs by digest and the version its labels claim,
     which is how a running container is traced to the commit that built it.'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - kubernetes
@@ -1424,7 +1425,7 @@ realms:
     at the commit that was running. Requires realm-jvm-logs, realm-polyglot-code, realm-git, realm-github,
     realm-kubernetes and realm-dev-vocabulary. With realm-elastic-logs installed, WhatBrokeFromLogs runs
     the same chain from the log store: counted over every event, and still there after the pod is gone.'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - developer-tools
