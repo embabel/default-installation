@@ -127,14 +127,17 @@ realms:
 - name: bible
   source: https://github.com/embabel-worlds/realm-bible.git
   url: https://github.com/embabel-worlds/realm-bible
-  description: 'The Bible as a graph you can query. Every verse, chapter and book is stored, with two
-    texts on each verse: the King James Version, which is the default, and the World English Bible, a
-    modern public-domain translation. Both are searchable. Five older translations (ASV, Basic English,
-    Darby, Douay-Rheims, Young''s Literal) are fetched live for any verse you want to compare. The people
-    come from Theographic Bible Metadata: 3,069 of them, joined to the verses that mention them and to
-    their fathers and mothers. A name is not a person — there are 26 Zechariahs — so ask by name and expect
-    every bearer. Keyless. Nothing to configure.'
-  version: 0.2.0
+  description: 'Every verse of the Bible in the King James and World English Bible, with its people and
+    older translations. Every verse, chapter and book of the 66 is stored, with two texts on each verse:
+    the King James Version, which is the default, and the World English Bible, a modern public-domain
+    translation. Both are searchable. Five older translations (ASV, Basic English, Darby, Douay-Rheims,
+    Young''s Literal) are fetched live for any verse you want to compare. The people come from Theographic
+    Bible Metadata: about 3,070 of them, joined to the verses that mention them and to their fathers and
+    mothers. A name is not a person — there are 26 Zechariahs — so ask by name and expect every bearer.
+    Catholic and Anglican editions sit beside it: the General Roman Calendar, the Rosary, the deuterocanon
+    in the Douay-Rheims and the saints from Wikidata; the 1979 Book of Common Prayer''s Daily Office,
+    collects, Psalter and the Articles of Religion. Keyless. Nothing to configure.'
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - bible
@@ -246,17 +249,16 @@ realms:
 - name: county-cricket
   source: https://github.com/embabel-worlds/realm-county-cricket.git
   url: https://github.com/embabel-worlds/realm-county-cricket
-  description: 'The County Championship as a graph: every match Cricsheet records, ball by ball, reduced
-    to scorecards — each team innings, every batter''s innings and every bowler''s spell — for the 2014
-    to 2026 seasons, all 18 first-class counties. Stored, not fetched: 1,483 matches, about 5,200 team
-    innings, 46,000 batting innings and 27,000 bowling spells, so a season''s leading run-scorers or a
-    bowler''s career is one query over the realm''s own rows. Results, margins, tables of wins, draws
-    and losses; batting and bowling leaders with averages, strike rates, hundreds and five-fors; a player''s
-    season-by-season record; a team''s results; head-to-head; the full scorecard of any match. What it
-    does NOT carry: official championship points (bonus points and over-rate penalties are not in the
-    ball-by-ball record), the 2020 Bob Willis Trophy, and matches before 2014. Source: Cricsheet (ODC-By).
-    Keyless.'
-  version: 0.1.0
+  description: 'County Championship scorecards, 2014 to 2026: every match, team innings, batting innings
+    and bowling spell. Every match Cricsheet records, ball by ball, reduced to scorecards for all 18 first-class
+    counties. Stored, not fetched: 1,483 matches, about 5,200 team innings, 46,000 batting innings and
+    27,000 bowling spells, so a season''s leading run-scorers or a bowler''s career is one query over
+    the realm''s own rows. Results, margins, tables of wins, draws and losses; batting and bowling leaders
+    with averages, strike rates, hundreds and five-fors; a player''s season-by-season record; a team''s
+    results; head-to-head; the full scorecard of any match. What it does NOT carry: official championship
+    points (bonus points and over-rate penalties are not in the ball-by-ball record), the 2020 Bob Willis
+    Trophy, and matches before 2014. Source: Cricsheet (ODC-By). Keyless.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - cricket
@@ -701,19 +703,19 @@ realms:
 - name: homelessness-vancouver-sydney
   source: https://github.com/embabel-worlds/realm-homelessness-vancouver-sydney.git
   url: https://github.com/embabel-worlds/realm-homelessness-vancouver-sydney
-  description: 'Homelessness in Vancouver and Sydney, side by side, from the counts each city actually
-    publishes — stored, so a comparison is one query over the realm''s own rows. Vancouver: the Greater
-    Vancouver point-in-time count 2005–2025 (regional, sheltered and unsheltered, by sub-region incl.
-    the City of Vancouver, 2025 survey demographics), BC Stats'' annual estimate 2019–2024, and City of
-    Vancouver shelter beds 2016–2025. Sydney: the City of Sydney street count (every February and August
-    since 2010), the NSW Statewide Street Count by LGA 2020–2026, and the ABS census estimate of homelessness
-    by operational group (Greater Sydney 2021, City of Sydney 2016 and 2021, NSW 2006–2021). Populations
-    for rates per 10,000. The two cities count different things, and the realm says so on every row: each
-    figure has its source''s tier and, only where the meaning genuinely lines up, a cross-city `compareAs`
-    family — sleepingOutside, inCrisisAccommodation, oneNightTotal. What it does NOT carry: the City of
-    Vancouver''s own off-cycle counts, Specialist Homelessness Services client data below state level,
-    demographics for Sydney''s street counts. Keyless.'
-  version: 0.1.0
+  description: 'Homelessness counts for Vancouver and Sydney, side by side, as each city publishes them.
+    Stored, so a comparison is one query over the realm''s own rows. Vancouver: the Greater Vancouver
+    point-in-time count 2005–2025 (regional, sheltered and unsheltered, by sub-region incl. the City of
+    Vancouver, 2025 survey demographics), BC Stats'' annual estimate 2019–2024, and City of Vancouver
+    shelter beds 2016–2025. Sydney: the City of Sydney street count (every February and August since 2010),
+    the NSW Statewide Street Count by LGA 2020–2026, and the ABS census estimate of homelessness by operational
+    group (Greater Sydney 2021, City of Sydney 2016 and 2021, NSW 2006–2021). Populations for rates per
+    10,000. The two cities count different things, and the realm says so on every row: each figure has
+    its source''s tier and, only where the meaning genuinely lines up, a cross-city `compareAs` family
+    — sleepingOutside, inCrisisAccommodation, oneNightTotal. What it does NOT carry: the City of Vancouver''s
+    own off-cycle counts, Specialist Homelessness Services client data below state level, demographics
+    for Sydney''s street counts. Keyless.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - homelessness
@@ -1212,14 +1214,15 @@ realms:
 - name: quran
   source: https://github.com/embabel-worlds/realm-quran.git
   url: https://github.com/embabel-worlds/realm-quran
-  description: 'The Quran as a graph you can query. Every ayah of the 114 surahs is stored with three
-    texts: the Arabic in Uthmani script (the Quran itself), the same Arabic without diacritics for searching,
-    and Pickthall''s English (1930), a translation of the meaning. Read an ayah or a surah, search in
-    English or Arabic, list the surahs in the order of the mushaf or of revelation, and see what each
-    of the thirty ajza holds. A child of the scripture vocabulary: an Ayah is a Verse, so a question asked
-    of every scripture — which verses speak of mercy — is answered here and in the Bible alike. Keyless.
-    Nothing to configure. Arabic text from the Tanzil Project (tanzil.net), CC BY 3.0, verbatim.'
-  version: 0.1.0
+  description: 'Every ayah of the Quran''s 114 surahs in Arabic and Pickthall''s English, by surah, ayah
+    and juz. Each is stored with three texts: the Arabic in Uthmani script (the Quran itself), the same
+    Arabic without diacritics for searching, and Pickthall''s English (1930), a translation of the meaning.
+    Read an ayah or a surah, search in English or Arabic, list the surahs in the order of the mushaf or
+    of revelation, and see what each of the thirty ajza holds. A child of the scripture vocabulary: an
+    Ayah is a Verse, so a question asked of every scripture — which verses speak of mercy — is answered
+    here and in the Bible alike. Keyless. Nothing to configure. Arabic text from the Tanzil Project (tanzil.net),
+    CC BY 3.0, verbatim.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - quran
@@ -1379,31 +1382,32 @@ realms:
 - name: uk-streets
   source: https://github.com/embabel-worlds/realm-uk-streets.git
   url: https://github.com/embabel-worlds/realm-uk-streets
-  description: 'Street-level Britain, joined at a place: police-recorded crime, every registered property
-    sale since 1995, the House Price Index, ONS median pay, Census 2021 ethnicity, schools, food-hygiene
-    ratings, live flood alerts, and each place''s MP with the seat''s latest margin — eleven keyless official
-    sources queryable as one graph, anchored on `UkPlace`s you watch at two zoom levels (a full postcode
-    for street level, an outcode for the district). The official ONS district crime table adds a NATIONAL
-    cross-section: every local authority''s recorded-crime rate per 1,000 residents, rankable and joinable
-    to pay. Cross-source views answer what no single register can: CrimeVsIncome, CrimeVsIncomeAcrossDistricts,
-    DistrictCrimeLeague, IncomeByParty, SeatsAndMargins, PriceTrendAtMyPlaces, WhereNotToEat, PlaceDossier.
-    The Street Lens app (`apps/street-lens.html`) puts it all on a map of Britain — a dossier per dot.
-    The COMMUNITY axis reads what a place-based data platform copies in — school readiness, youth justice
-    first-time entrants, NEET, children in low income, under-18 conceptions, childhood obesity, life expectancy
-    (OHID Fingertips, with the publisher''s own "compared to England" on every row), the claimant count
-    and population by age (NOMIS), the Indices of Deprivation 2025, and DfE early-years, absence and KS4
-    results — live, dated, at the authority. The ORGANISATION axis makes the unit an organisation rather
-    than a statistic: every charity declaring the place as an area of operation and its daily register
-    record and event history (Charity Commission), every published grant into the district and who received
-    it (360Giving), and the register record behind any recipient identifier (Find that Charity). Views:
-    PlaceProfile, WhereThisPlaceStandsOut, SmartInsights (ranked against every authority in England, with
-    a dial), IndicatorTrendAtPlace, IndicatorAcrossEngland, MostDeprivedDistricts2025, CharitiesOperatingHere,
-    CharityChangesHere, WhoFundsThisPlace, FundedOrganisationsHere, SchoolReadinessAtPlace, Ks4AttainmentAtPlace
-    and more. Three DERIVE rule sets conclude what no query can: charity succession and lineage from the
-    Commission''s event log, and money regranted through a publishing intermediary from 360Giving. The
-    Community Profile app (`apps/community-profile.html`) puts a place''s profile on one page. No API
-    keys and no accounts — the realm works the moment it is installed.'
-  version: 0.4.0
+  description: 'Street-level Britain for the places you watch: crime, property, pay, census, schools,
+    health and MPs. Joined at a place: police-recorded crime, every registered property sale since 1995,
+    the House Price Index, ONS median pay, Census 2021 ethnicity, schools, food-hygiene ratings, live
+    flood alerts, and each place''s MP with the seat''s latest margin — eleven keyless official sources
+    queryable as one graph, anchored on `UkPlace`s you watch at two zoom levels (a full postcode for street
+    level, an outcode for the district). The official ONS district crime table adds a NATIONAL cross-section:
+    every local authority''s recorded-crime rate per 1,000 residents, rankable and joinable to pay. Cross-source
+    views answer what no single register can: CrimeVsIncome, CrimeVsIncomeAcrossDistricts, DistrictCrimeLeague,
+    IncomeByParty, SeatsAndMargins, PriceTrendAtMyPlaces, WhereNotToEat, PlaceDossier. The Street Lens
+    app (`apps/street-lens.html`) puts it all on a map of Britain — a dossier per dot. The COMMUNITY axis
+    reads what a place-based data platform copies in — school readiness, youth justice first-time entrants,
+    NEET, children in low income, under-18 conceptions, childhood obesity, life expectancy (OHID Fingertips,
+    with the publisher''s own "compared to England" on every row), the claimant count and population by
+    age (NOMIS), the Indices of Deprivation 2025, and DfE early-years, absence and KS4 results — live,
+    dated, at the authority. The ORGANISATION axis makes the unit an organisation rather than a statistic:
+    every charity declaring the place as an area of operation and its daily register record and event
+    history (Charity Commission), every published grant into the district and who received it (360Giving),
+    and the register record behind any recipient identifier (Find that Charity). Views: PlaceProfile,
+    WhereThisPlaceStandsOut, SmartInsights (ranked against every authority in England, with a dial), IndicatorTrendAtPlace,
+    IndicatorAcrossEngland, MostDeprivedDistricts2025, CharitiesOperatingHere, CharityChangesHere, WhoFundsThisPlace,
+    FundedOrganisationsHere, SchoolReadinessAtPlace, Ks4AttainmentAtPlace and more. Three DERIVE rule
+    sets conclude what no query can: charity succession and lineage from the Commission''s event log,
+    and money regranted through a publishing intermediary from 360Giving. The Community Profile app (`apps/community-profile.html`)
+    puts a place''s profile on one page. No API keys and no accounts — the realm works the moment it is
+    installed.'
+  version: 0.5.0
   author: rod
   tags:
   - united-kingdom
