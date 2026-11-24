@@ -1269,12 +1269,12 @@ realms:
 - name: scripture-vocabulary
   source: https://github.com/embabel-worlds/realm-scripture-vocabulary.git
   url: https://github.com/embabel-worlds/realm-scripture-vocabulary
-  description: The words every scripture shares, whichever scripture it is. Parent types only — a holy
-    book, a book within it, a chapter, a verse, a portion read on a cycle — with no producers and no data
-    of its own. A realm over one scripture (the Bible, the Quran, the Tanakh, the Book of Mormon) declares
-    its own types as children of these, so a question asked about Verse is answered by every scripture
-    installed, and `MATCH (v:Quran:Verse)` still asks one.
-  version: 0.3.0
+  description: The types every scripture shares (holy book, book, chapter, verse, reading portion) and
+    views across them all. Parent types only, with no producers and no data of its own. A realm over one
+    scripture (the Bible, the Quran, the Tanakh, the Book of Mormon) declares its own types as children
+    of these, so a question asked about Verse is answered by every scripture installed, and `MATCH (v:Quran:Verse)`
+    still asks one.
+  version: 0.3.1
   author: Rod Johnson
   tags:
   - vocabulary
