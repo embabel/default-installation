@@ -89,7 +89,7 @@ realms:
     and whether an unknown birth time leaves the Moon''s sign undecided. And VERIFIED_BY audits the arithmetic
     against NASA, live, for any chart — so the numbers are checkable rather than merely confident. Keyless.
     Nothing to configure.'
-  version: 0.1.3
+  version: 0.1.4
   author: Rod Johnson
   tags:
   - astrology
@@ -351,7 +351,7 @@ realms:
     a question needs, records how much of the registry each search covered, and never mirrors a registry.
     Sponsors, sites and investigators resolve to shared company, institution and researcher profiles through
     realm-research.
-  version: 0.2.0
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - clinical-trials
@@ -772,7 +772,7 @@ realms:
     the `research` realm installed, for `gateway.brave.webSearch`, plus a BRAVE_API_KEY. Without it the
     catalogue, the ratings, the listening record and every titles-only view still work; only the listen
     and score links go quiet.'
-  version: 0.2.1
+  version: 0.2.2
   author: Rod Johnson
   tags:
   - music
@@ -1200,7 +1200,7 @@ realms:
     is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh. Calls
     outside Java are matched by name (`resolution: name`), and say so. Requires the appliance''s `source-tree`
     producer kind.'
-  version: 0.1.0
+  version: 0.1.2
   author: Embabel
   tags:
   - code
