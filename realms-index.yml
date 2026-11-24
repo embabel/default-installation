@@ -89,7 +89,7 @@ realms:
     and whether an unknown birth time leaves the Moon''s sign undecided. And VERIFIED_BY audits the arithmetic
     against NASA, live, for any chart — so the numbers are checkable rather than merely confident. Keyless.
     Nothing to configure.'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - astrology
@@ -173,7 +173,7 @@ realms:
     no producers, no views and no vendor. A realm over a CRM, a helpdesk or a billing system declares
     its own types as children of these, so a question asked about SupportCase is answered by whichever
     helpdesk is installed, and keeps being answered when it is replaced.
-  version: 0.1.4
+  version: 0.1.5
   author: Rod Johnson
   tags:
   - vocabulary
@@ -214,7 +214,7 @@ realms:
     (realm-business-vocabulary, installed first), so a question asked about support cases is answered
     here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
     own UI is what the next query sees.'
-  version: 0.2.1
+  version: 0.2.2
   author: Rod Johnson
   tags:
   - integrations
@@ -770,7 +770,7 @@ realms:
     the `research` realm installed, for `gateway.brave.webSearch`, plus a BRAVE_API_KEY. Without it the
     catalogue, the ratings, the listening record and every titles-only view still work; only the listen
     and score links go quiet.'
-  version: 0.2.0
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - music
@@ -786,19 +786,20 @@ realms:
 - name: java-code
   source: https://github.com/embabel-worlds/realm-java-code.git
   url: https://github.com/embabel-worlds/realm-java-code
-  description: 'Any Java jar as a graph you can query, read from the jar itself when a query reaches it:
-    its packages and types (with superclass and interfaces), fields (with whether each is a map, collection,
-    array, ThreadLocal or Reference), methods, which methods read and write which fields, and which methods
-    call which - into the jar or out to the JDK and other libraries - with source lines from debug info.
-    And what the program casts at run time: every checkcast and instanceof, by method and line, and each
-    method''s branches, loops, switches and handlers as compiled. Nothing is ingested and nothing is stored.
-    Pin a jar by path and traverse: `MATCH (j:Jar {path:''data/jars/x.jar''})-[:HAS_TYPE]->(t:JavaType)`.
-    Paths resolve against the world''s data/ tree, an operator-trusted root, or this realm''s own directory.
-    Names are binary class names (`pkg.Outer$Inner`), exactly as heap dumps and stack traces print them,
-    so a heap realm joins types and fields by name. Bytecode only: no source is needed, and none is read.
-    Ships spring-core 6.2.18 as an example jar, with three demo views over it; every other view takes
-    any jar. Requires the appliance''s `jar` producer kind.'
-  version: 0.1.0
+  description: 'Any Java jar''s bytecode as a graph: packages, types, fields, methods, calls, accesses
+    and casts. Read from the jar itself when a query reaches it: its packages and types (with superclass
+    and interfaces), fields (with whether each is a map, collection, array, ThreadLocal or Reference),
+    methods, which methods read and write which fields, and which methods call which - into the jar or
+    out to the JDK and other libraries - with source lines from debug info. And what the program casts
+    at run time: every checkcast and instanceof, by method and line, and each method''s branches, loops,
+    switches and handlers as compiled. Nothing is ingested and nothing is stored. Pin a jar by path and
+    traverse: `MATCH (j:Jar {path:''data/jars/x.jar''})-[:HAS_TYPE]->(t:JavaType)`. Paths resolve against
+    the world''s data/ tree, an operator-trusted root, or this realm''s own directory. Names are binary
+    class names (`pkg.Outer$Inner`), exactly as heap dumps and stack traces print them, so a heap realm
+    joins types and fields by name. Bytecode only: no source is needed, and none is read. Ships spring-core
+    6.2.18 as an example jar, with three demo views over it; every other view takes any jar. Requires
+    the appliance''s `jar` producer kind.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - java
@@ -932,7 +933,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.2.0
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - integrations
@@ -1132,7 +1133,7 @@ realms:
     deps.dev, which publishes Scorecard results for every indexed project. Open, keyless, no account.
     It pairs with realm-exposure, which asks whether a dependency is vulnerable TODAY; this one asks whether
     it is likely to be vulnerable next year.'
-  version: 0.1.0
+  version: 0.1.1
   author: rod
   tags:
   - open-source
