@@ -89,7 +89,7 @@ realms:
     and whether an unknown birth time leaves the Moon''s sign undecided. And VERIFIED_BY audits the arithmetic
     against NASA, live, for any chart — so the numbers are checkable rather than merely confident. Keyless.
     Nothing to configure.'
-  version: 0.1.1
+  version: 0.1.3
   author: Rod Johnson
   tags:
   - astrology
@@ -130,14 +130,14 @@ realms:
   description: 'Every verse of the Bible in the King James and World English Bible, with its people and
     older translations. Every verse, chapter and book of the 66 is stored, with two texts on each verse:
     the King James Version, which is the default, and the World English Bible, a modern public-domain
-    translation. Both are searchable. Five older translations (ASV, Basic English, Darby, Douay-Rheims,
-    Young''s Literal) are fetched live for any verse you want to compare. The people come from Theographic
-    Bible Metadata: about 3,070 of them, joined to the verses that mention them and to their fathers and
-    mothers. A name is not a person — there are 26 Zechariahs — so ask by name and expect every bearer.
-    Catholic and Anglican editions sit beside it: the General Roman Calendar, the Rosary, the deuterocanon
-    in the Douay-Rheims and the saints from Wikidata; the 1979 Book of Common Prayer''s Daily Office,
-    collects, Psalter and the Articles of Religion. Keyless. Nothing to configure.'
-  version: 0.2.1
+    translation. Both are searchable. Four older translations (ASV, Basic English, Darby, Douay-Rheims)
+    are fetched live for any verse you want to compare. The people come from Theographic Bible Metadata:
+    about 3,070 of them, joined to the verses that mention them and to their fathers and mothers. A name
+    is not a person — there are 26 Zechariahs — so ask by name and expect every bearer. Catholic and Anglican
+    editions sit beside it: the General Roman Calendar, the Rosary, the deuterocanon in the Douay-Rheims
+    and the saints from Wikidata; the 1979 Book of Common Prayer''s Daily Office, collects, Psalter and
+    the Articles of Religion. Keyless. Nothing to configure.'
+  version: 0.3.0
   author: Rod Johnson
   tags:
   - bible
@@ -149,15 +149,15 @@ realms:
 - name: book-of-mormon
   source: https://github.com/embabel-worlds/realm-book-of-mormon.git
   url: https://github.com/embabel-worlds/realm-book-of-mormon
-  description: 'The Book of Mormon as a graph you can query: every verse of its fifteen books, 1 Nephi
-    to Moroni, with the headings printed in the text since 1830. Read a verse or a chapter, search it,
-    see what each book holds, and find where it quotes the Bible — twenty-one chapters of Isaiah, the
-    Sermon on the Mount, Malachi — verse by verse. With realm-bible installed, each quoting verse is joined
-    to the King James verse it quotes by CORRESPONDS_TO, so a quoted chapter reads beside its source and
-    the differences show. A child of the scripture vocabulary: a BomVerse is a Verse, so a question asked
-    of every scripture is answered here too. Keyless. Nothing to configure. Text public domain, from bcbooks/scriptures-json;
-    no copyrighted chapter summaries or footnotes.'
-  version: 0.1.0
+  description: 'Every verse of the Book of Mormon, 1 Nephi to Moroni, with the King James verses it quotes.
+    Its fifteen books carry the headings printed in the text since 1830. Read a verse or a chapter, search
+    it, see what each book holds, and find where it quotes the Bible — twenty-one chapters of Isaiah,
+    the Sermon on the Mount, Malachi — verse by verse. With realm-bible, which it requires, each quoting
+    verse is joined to the King James verse it quotes by CORRESPONDS_TO, so a quoted chapter reads beside
+    its source and the differences show. A child of the scripture vocabulary: a BomVerse is a Verse, so
+    a question asked of every scripture is answered here too. Keyless. Nothing to configure. Text public
+    domain, from bcbooks/scriptures-json; no copyrighted chapter summaries or footnotes.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - book-of-mormon
@@ -345,11 +345,13 @@ realms:
 - name: drugtrials
   source: https://github.com/embabel-worlds/realm-drugtrials.git
   url: https://github.com/embabel-worlds/realm-drugtrials
-  description: WhatsBeenTried.org answers “what research exists for my disease, what happened to it, and
-    what problems are visible?” from live public registries and literature. It uses Virtual Cypher to
-    fetch only the evidence needed for a question, records source coverage, and never mirrors a trial
-    registry.
-  version: 0.1.0
+  description: Clinical trials for a disease, live from ClinicalTrials.gov, with PubMed papers and FDA
+    drug labels. WhatsBeenTried.org answers “what research exists for my disease, what happened to it,
+    and what problems are visible?” from live public registries and literature. It fetches only the evidence
+    a question needs, records how much of the registry each search covered, and never mirrors a registry.
+    Sponsors, sites and investigators resolve to shared company, institution and researcher profiles through
+    realm-research.
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - clinical-trials
@@ -834,16 +836,16 @@ realms:
 - name: java-source-code
   source: https://github.com/embabel-worlds/realm-java-source-code.git
   url: https://github.com/embabel-worlds/realm-java-source-code
-  description: 'The source code a Java jar was compiled from, reached from what realm-java-code finds
-    in the jar: a type''s file, the code at a method, a call or a field access, a method''s whole declaration,
-    and each call site with what it passes. Read where the source is, when a query reaches it - a `-sources.jar`
-    beside the jar, a mounted checkout, or a git repository at a commit - and parsed on demand. Nothing
-    is ingested and nothing is stored. Optional by design: realm-java-code answers without it, and a jar
-    with no source found answers everything but the source, with a warning saying none was found. Spans
-    say whether the source matches the jar (`matches: false` when it is another version). Ships the sources
-    of spring-core 6.2.18, matching realm-java-code''s example jar. Requires realm-java-code and the appliance''s
-    `source-tree` producer kind (`from: jar`).'
-  version: 0.1.0
+  description: 'The Java source a jar was compiled from, read on demand and joined to its bytecode by
+    line. Reached from what realm-java-code finds in the jar: a type''s file, the code at a method, a
+    call or a field access, a method''s whole declaration, and each call site with what it passes. Read
+    where the source is, when a query reaches it - a `-sources.jar` beside the jar, a mounted checkout,
+    or a git repository at a commit - and parsed on demand. Nothing is ingested and nothing is stored.
+    Optional by design: realm-java-code answers without it, and a jar with no source found answers everything
+    but the source, with a warning saying none was found. Spans say whether the source matches the jar
+    (`matches: false` when it is another version). Ships the sources of spring-core 6.2.18, matching realm-java-code''s
+    example jar. Requires realm-java-code and the appliance''s `source-tree` producer kind (`from: jar`).'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - java
@@ -943,17 +945,18 @@ realms:
 - name: lds-scriptures
   source: https://github.com/embabel-worlds/realm-lds-scriptures.git
   url: https://github.com/embabel-worlds/realm-lds-scriptures
-  description: 'The Doctrine and Covenants and the Pearl of Great Price as a graph you can query — the
-    two books of Latter-day Saint scripture beside the Book of Mormon. Every verse of the 138 sections,
-    and of Moses, Abraham, Joseph Smith—Matthew, Joseph Smith—History and the Articles of Faith. Read
-    a verse or a section, search either, and find where they draw on the Bible: Moses retells Genesis
-    1–6, Joseph Smith—Matthew retells Matthew 24, and the sections quote and echo the New Testament throughout.
-    With realm-bible installed, each verse that quotes or echoes the King James is joined to it by CORRESPONDS_TO,
-    so a chapter reads beside its source and the differences show. A child of the scripture vocabulary:
-    two holy books, each its own scripture, so a question asked of every scripture answers for each. Keyless.
-    Nothing to configure. Text public domain, from bcbooks/scriptures-json; no copyrighted introductions,
-    headings, footnotes or Official Declarations.'
-  version: 0.1.0
+  description: 'Every verse of the Doctrine and Covenants and the Pearl of Great Price, with the King
+    James verses they draw on. They are two of the Latter-day Saint standard works, beside the Bible and
+    the Book of Mormon: the 138 sections, and Moses, Abraham, Joseph Smith—Matthew, Joseph Smith—History
+    and the Articles of Faith. Read a verse or a section, search either, and find where they draw on the
+    Bible: Moses 2–8 parallels Genesis 1–6 and Joseph Smith—Matthew parallels Matthew 24 (both from Joseph
+    Smith''s translation of the Bible), and the sections quote and echo the New Testament throughout.
+    With realm-bible, which it requires, each verse that quotes or echoes the King James is joined to
+    it by CORRESPONDS_TO, so a chapter reads beside its source and the differences show. A child of the
+    scripture vocabulary: two holy books, each its own scripture, so a question asked of every scripture
+    answers for each. Keyless. Nothing to configure. Text public domain, from bcbooks/scriptures-json;
+    no copyrighted introductions, headings, footnotes or Official Declarations.'
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - doctrine-and-covenants
@@ -1346,17 +1349,17 @@ realms:
 - name: tanakh
   source: https://github.com/embabel-worlds/realm-tanakh.git
   url: https://github.com/embabel-worlds/realm-tanakh
-  description: 'The Tanakh — the Hebrew Bible, Torah, Prophets and Writings — as a graph you can query.
-    Every verse is stored with three texts: the Hebrew with vowel points, the same Hebrew unpointed for
-    searching, and the JPS 1917 English. Read a verse or a chapter, search in English or Hebrew, browse
-    the thirty-nine books in Hebrew order, and walk the fifty-four weekly Torah portions. Numbering is
-    Hebrew, the Tanakh''s own: a psalm''s title is its first verse, and Malachi has three chapters. Each
-    verse names the King James verse that holds the same text, and with realm-bible installed the two
-    are joined by CORRESPONDS_TO, so any chapter can be read beside its King James rendering however the
-    two number it. A child of the scripture vocabulary: a TanakhVerse is a Verse, so a question asked
-    of every scripture is answered here too. Keyless. Nothing to configure. Texts public domain, from
-    Sefaria.'
-  version: 0.2.0
+  description: 'Every verse of the Tanakh in Hebrew and the JPS 1917 English, in Hebrew numbering, with
+    its King James counterpart. The Hebrew Bible — Torah, Nevi''im (Prophets) and Ketuvim (Writings) —
+    with three texts on every verse: the Hebrew with vowel points, the same Hebrew unpointed for searching,
+    and the JPS 1917 English. Read a verse or a chapter, search in English or Hebrew, browse the thirty-nine
+    books in Hebrew order, and walk the fifty-four weekly Torah portions. Numbering is Hebrew, the Tanakh''s
+    own: a psalm''s title is its first verse, and Malachi has three chapters. Each verse names the King
+    James verse that holds the same text, and with realm-bible, which it requires, the two are joined
+    by CORRESPONDS_TO, so any chapter can be read beside its King James rendering however the two number
+    it. A child of the scripture vocabulary: a TanakhVerse is a Verse, so a question asked of every scripture
+    is answered here too. Keyless. Nothing to configure. Texts public domain, from Sefaria.'
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - tanakh
