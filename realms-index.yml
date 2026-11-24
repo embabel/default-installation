@@ -58,13 +58,13 @@ realms:
 - name: account-health
   source: https://github.com/embabel-worlds/realm-account-health.git
   url: https://github.com/embabel-worlds/realm-account-health
-  description: 'Which customers are in trouble, which are ready for more, and what the CRM does not know
-    about them — read across a CRM, a helpdesk and a billing system through the business vocabulary (realm-business-vocabulary),
-    naming no product. Every view, rule and judgement is written against the vocabulary''s types, edges
-    and properties and joins on the CustomerAccount spine, so the same answers come from whichever CRM,
-    helpdesk and billing system the world has. Nothing is stored: each answer is read from the three systems
-    when it is asked for.'
-  version: 0.1.0
+  description: 'Which customers are in trouble or ready for more, across a CRM, a helpdesk and billing.
+    It reads all three through the business vocabulary (realm-business-vocabulary), naming no product,
+    and says what the CRM does not know about them. Every view, rule and judgement is written against
+    the vocabulary''s types, edges and properties and joins on the CustomerAccount spine, so the same
+    answers come from whichever CRM, helpdesk and billing system the world has. Nothing is stored: each
+    answer is read from the three systems when it is asked for.'
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - crm
@@ -170,7 +170,7 @@ realms:
     no producers, no views and no vendor. A realm over a CRM, a helpdesk or a billing system declares
     its own types as children of these, so a question asked about SupportCase is answered by whichever
     helpdesk is installed, and keeps being answered when it is replaced.
-  version: 0.1.2
+  version: 0.1.4
   author: Rod Johnson
   tags:
   - vocabulary
@@ -211,7 +211,7 @@ realms:
     (realm-business-vocabulary, installed first), so a question asked about support cases is answered
     here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
     own UI is what the next query sees.'
-  version: 0.2.0
+  version: 0.2.1
   author: Rod Johnson
   tags:
   - integrations
@@ -1088,12 +1088,15 @@ realms:
 - name: odoo
   source: https://github.com/embabel-worlds/realm-odoo.git
   url: https://github.com/embabel-worlds/realm-odoo
-  description: Odoo Community over its OWN middle tier — the JSON-2 API, never the database. Types for
-    the stable core CRM/sales/invoicing models with declared virtual joins (the ORM states its relations;
-    nothing here is guessed), producers with domain pushdown, and a bundled skill that teaches a coding
-    agent to extend the realm for a customer's custom modules by reading fields_get through this same
-    API.
-  version: 0.1.3
+  description: 'Odoo CRM deals, customers, invoices and chatter, read live through its JSON-2 API. Over
+    Odoo''s OWN middle tier, never the database: CRM deals, partners (companies and the people at them,
+    with the company hierarchy), unpaid invoices, orders, chatter, meetings and activities, as virtual
+    types that fill the business vocabulary''s Opportunity, CrmAccount, AccountContact, AccountNote, Meeting
+    and FollowUp. Every filter a question writes on status, stage, owner, name, amount or date is applied
+    by Odoo''s own domain, a single company or deal is one call, and every relation is one the ORM declares
+    — nothing is guessed. Ships a skill that teaches a coding agent to extend the realm for a customer''s
+    custom modules by reading fields_get through this same API.'
+  version: 0.2.0
   author: Rod Johnson
   tags:
   - integrations
