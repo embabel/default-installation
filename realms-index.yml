@@ -89,7 +89,7 @@ realms:
     and whether an unknown birth time leaves the Moon''s sign undecided. And VERIFIED_BY audits the arithmetic
     against NASA, live, for any chart — so the numbers are checkable rather than merely confident. Keyless.
     Nothing to configure.'
-  version: 0.1.4
+  version: 0.1.5
   author: Rod Johnson
   tags:
   - astrology
@@ -113,7 +113,7 @@ realms:
     no `readOnly: false` in the declaration (the platform refuses writes), the JDBC session hint, and
     a SELECT-only database role. The register reports what entities disclosed; a disclosure is a sourced
     fact, never a finding.'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - australia
@@ -137,7 +137,7 @@ realms:
     editions sit beside it: the General Roman Calendar, the Rosary, the deuterocanon in the Douay-Rheims
     and the saints from Wikidata; the 1979 Book of Common Prayer''s Daily Office, collects, Psalter and
     the Articles of Religion. Keyless. Nothing to configure.'
-  version: 0.3.0
+  version: 0.3.1
   author: Rod Johnson
   tags:
   - bible
@@ -157,7 +157,7 @@ realms:
     its source and the differences show. A child of the scripture vocabulary: a BomVerse is a Verse, so
     a question asked of every scripture is answered here too. Keyless. Nothing to configure. Text public
     domain, from bcbooks/scriptures-json; no copyrighted chapter summaries or footnotes.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - book-of-mormon
@@ -214,7 +214,7 @@ realms:
     (realm-business-vocabulary, installed first), so a question asked about support cases is answered
     here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
     own UI is what the next query sees.'
-  version: 0.2.3
+  version: 0.2.4
   author: Rod Johnson
   tags:
   - integrations
@@ -258,7 +258,7 @@ realms:
     results; head-to-head; the full scorecard of any match. What it does NOT carry: official championship
     points (bonus points and over-rate penalties are not in the ball-by-ball record), the 2020 Bob Willis
     Trophy, and matches before 2014. Source: Cricsheet (ODC-By). Keyless.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - cricket
@@ -320,7 +320,7 @@ realms:
     are parsed from the translation. Both are reconciled against Open Domesday; the agreement per field
     is in the README. Keyless. Nothing to configure. Data CC BY-NC-SA (Professor J.J.N. Palmer, University
     of Hull).'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - domesday
@@ -351,7 +351,7 @@ realms:
     a question needs, records how much of the registry each search covered, and never mirrors a registry.
     Sponsors, sites and investigators resolve to shared company, institution and researcher profiles through
     realm-research.
-  version: 0.2.1
+  version: 0.2.2
   author: Rod Johnson
   tags:
   - clinical-trials
@@ -390,7 +390,7 @@ realms:
     language on demand via (o:EsgObservation)-[:OF_DATAPOINT]->(d:EsgDatapoint)-[:SATISFIES]->(r:EsgRequirement)-[:IN_FRAMEWORK]->(f:EsgFramework).
     Every observation carries the chunk it came from, so a citation can be CHECKED rather than asserted.
     Absence of evidence is recorded as absence, never as assent.'
-  version: 1.8.1
+  version: 1.8.2
   author: Embabel
   tags:
   - esg
@@ -426,7 +426,7 @@ realms:
     on and take upstairs. Sources are open and keyless: GitHub''s dependency-graph SBOM, Google''s deps.dev,
     CISA''s Known Exploited Vulnerabilities catalog, and FIRST''s EPSS. Public repositories need no credentials
     at all, so the first answer arrives before anyone has been asked for an API key.'
-  version: 0.1.0
+  version: 0.1.1
   author: rod
   tags:
   - security
@@ -450,7 +450,7 @@ realms:
     roles concluded by rules; SanctionsExposed propagates up the chain. Nothing is copied: GLEIF answers
     per LEI, cached for a day; OFAC''s files are read once a day. GLEIF data is CC0; OFAC''s lists are
     US public domain; FIBO is MIT.'
-  version: 0.1.1
+  version: 0.1.2
   author: Embabel
   tags:
   - finance
@@ -474,7 +474,7 @@ realms:
     source: the SEC''s own EDGAR full-text search. Open, keyless, no account. US-listed filers only, which
     is a real limit and the realm says so rather than returning silence for a company that simply does
     not file there.'
-  version: 0.1.0
+  version: 0.1.1
   author: rod
   tags:
   - filings
@@ -542,7 +542,7 @@ realms:
     against the vocabulary reads git as it reads a forge, and a commit here is the commit realm-github
     links to its pull request: both carry the same `key`. Requires realm-dev-vocabulary and the appliance''s
     `git` producer kind.'
-  version: 0.1.2
+  version: 0.1.3
   author: Rod Johnson
   tags:
   - git
@@ -560,7 +560,7 @@ realms:
     response types and doesn't have to guess pagination shape, field names, or wrapper-vs-array. Bundles
     a `github-workflows` Agent Skill that teaches the workflow patterns (search-then-get, paginate safely,
     common pitfalls) — invaluable for smaller chat models.
-  version: 0.9.2
+  version: 0.9.3
   author: Rod Johnson
   tags:
   - integrations
@@ -581,7 +581,7 @@ realms:
     ones need a token granted on them. Pin a repository as GitHubRepository {full_name:''owner/repo''}
     and traverse. The anchor is the same label realm-github uses, so a world with both installed sees
     issues and workflow runs on one node.'
-  version: 0.3.4
+  version: 0.3.5
   author: Rod Johnson
   tags:
   - github
@@ -626,7 +626,7 @@ realms:
     Department lobbyist register API, both open and unauthenticated. This realm reports what the registers
     record and never characterises it: a limited tender, an amendment, or a lobbying relationship is a
     sourced fact, not a finding.'
-  version: 0.1.0
+  version: 0.1.1
   author: Embabel
   tags:
   - government
@@ -691,7 +691,7 @@ realms:
     saved by using it. Where realm-uk-streets is installed, every UkPlace you already watch gets the same
     treatment without being listed twice. One source: the UK National Grid ESO carbon intensity API, which
     is open, keyless, and needs no account.'
-  version: 0.1.0
+  version: 0.1.1
   author: rod
   tags:
   - carbon
@@ -717,7 +717,7 @@ realms:
     — sleepingOutside, inCrisisAccommodation, oneNightTotal. What it does NOT carry: the City of Vancouver''s
     own off-cycle counts, Specialist Homelessness Services client data below state level, demographics
     for Sydney''s street counts. Keyless.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - homelessness
@@ -772,7 +772,7 @@ realms:
     the `research` realm installed, for `gateway.brave.webSearch`, plus a BRAVE_API_KEY. Without it the
     catalogue, the ratings, the listening record and every titles-only view still work; only the listen
     and score links go quiet.'
-  version: 0.2.2
+  version: 0.2.3
   author: Rod Johnson
   tags:
   - music
@@ -801,7 +801,7 @@ realms:
     joins types and fields by name. Bytecode only: no source is needed, and none is read. Ships spring-core
     6.2.18 as an example jar, with three demo views over it; every other view takes any jar. Requires
     the appliance''s `jar` producer kind.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - java
@@ -845,7 +845,7 @@ realms:
     but the source, with a warning saying none was found. Spans say whether the source matches the jar
     (`matches: false` when it is another version). Ships the sources of spring-core 6.2.18, matching realm-java-code''s
     example jar. Requires realm-java-code and the appliance''s `source-tree` producer kind (`from: jar`).'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - java
@@ -935,7 +935,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.2.3
+  version: 0.2.4
   author: Rod Johnson
   tags:
   - integrations
@@ -956,7 +956,7 @@ realms:
     scripture vocabulary: two holy books, each its own scripture, so a question asked of every scripture
     answers for each. Keyless. Nothing to configure. Text public domain, from bcbooks/scriptures-json;
     no copyrighted introductions, headings, footnotes or Official Declarations.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - doctrine-and-covenants
@@ -1038,7 +1038,7 @@ realms:
     the anchor; each source is a keyed RSS search reached by traversal, so nothing is mirrored and nothing
     goes stale. Sources: the open web, plus site-scoped searches over Pinkbike, Vital MTB, Singletracks,
     BikeRadar and r/MTB. Needs no API key. Traversal is (t:MtbTopic)-[:HAS_MTB_NEWS|HAS_PINKBIKE_NEWS|...]->(n:MtbNewsItem).'
-  version: 0.1.0
+  version: 0.1.1
   author: jasper
   tags:
   - news
@@ -1062,7 +1062,7 @@ realms:
     latitude. Sources: MET Norway (moon), sunrise-sunset.org (astronomical twilight), Open-Meteo (hourly
     cloud through the night), NOAA SWPC (planetary K index forecast), and G7VRD (ISS pass predictions).
     No API keys, no accounts, no configuration.'
-  version: 0.1.0
+  version: 0.1.1
   author: rod
   tags:
   - astronomy
@@ -1104,7 +1104,7 @@ realms:
     by Odoo''s own domain, a single company or deal is one call, and every relation is one the ORM declares
     — nothing is guessed. Ships a skill that teaches a coding agent to extend the realm for a customer''s
     custom modules by reading fields_get through this same API.'
-  version: 0.2.3
+  version: 0.2.4
   author: Rod Johnson
   tags:
   - integrations
@@ -1136,7 +1136,7 @@ realms:
     deps.dev, which publishes Scorecard results for every indexed project. Open, keyless, no account.
     It pairs with realm-exposure, which asks whether a dependency is vulnerable TODAY; this one asks whether
     it is likely to be vulnerable next year.'
-  version: 0.1.1
+  version: 0.1.2
   author: rod
   tags:
   - open-source
@@ -1200,7 +1200,7 @@ realms:
     is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh. Calls
     outside Java are matched by name (`resolution: name`), and say so. Requires the appliance''s `source-tree`
     producer kind.'
-  version: 0.1.2
+  version: 0.1.3
   author: Embabel
   tags:
   - code
@@ -1226,7 +1226,7 @@ realms:
     Ayah is a Verse, so a question asked of every scripture — which verses speak of mercy — is answered
     here and in the Bible alike. Keyless. Nothing to configure. Arabic text from the Tanzil Project (tanzil.net),
     CC BY 3.0, verbatim.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - quran
@@ -1278,7 +1278,7 @@ realms:
     scripture (the Bible, the Quran, the Tanakh, the Book of Mormon) declares its own types as children
     of these, so a question asked about Verse is answered by every scripture installed, and `MATCH (v:Quran:Verse)`
     still asks one.
-  version: 0.3.1
+  version: 0.3.2
   author: Rod Johnson
   tags:
   - vocabulary
@@ -1359,7 +1359,7 @@ realms:
     by CORRESPONDS_TO, so any chapter can be read beside its King James rendering however the two number
     it. A child of the scripture vocabulary: a TanakhVerse is a Verse, so a question asked of every scripture
     is answered here too. Keyless. Nothing to configure. Texts public domain, from Sefaria.'
-  version: 0.2.1
+  version: 0.2.2
   author: Rod Johnson
   tags:
   - tanakh
@@ -1424,7 +1424,7 @@ realms:
     and money regranted through a publishing intermediary from 360Giving. The Community Profile app (`apps/community-profile.html`)
     puts a place''s profile on one page. No API keys and no accounts — the realm works the moment it is
     installed.'
-  version: 0.5.0
+  version: 0.5.1
   author: rod
   tags:
   - united-kingdom
@@ -1446,7 +1446,7 @@ realms:
     at the commit that was running. Requires realm-jvm-logs, realm-polyglot-code, realm-git, realm-github,
     realm-kubernetes and realm-dev-vocabulary. With realm-elastic-logs installed, WhatBrokeFromLogs runs
     the same chain from the log store: counted over every event, and still there after the pod is gone.'
-  version: 0.1.1
+  version: 0.1.2
   author: Rod Johnson
   tags:
   - developer-tools
