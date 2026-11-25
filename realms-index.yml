@@ -813,18 +813,19 @@ realms:
 - name: java-project
   source: https://github.com/embabel-worlds/realm-java-project.git
   url: https://github.com/embabel-worlds/realm-java-project
-  description: 'A Java project — yours — as a graph you can query, read where it lives when a question
-    reaches it: its Maven build (every module, the dependency tree Maven resolves, the versions its BOMs
-    pin), and its own source (every type, member, annotation and import, and every setting in its .properties
-    and YAML files), each linked to the exact line. Name the project by a key: a repository, `https://github.com/acme/shop@main`
-    (the default branch without `@ref`), or a folder — under the world''s data/, or in the workspace the
-    appliance owner mounted with `embabel workspace use ~/code`, where `shop` means that folder''s `shop`.
-    MATCH (p:JavaProject {key: ''https://github.com/acme/shop''})-[:DECLARES_TYPE]->(t:JavaProjectType)
-    … Nothing is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh.
-    It knows no framework — an annotation is its name and its attributes as written — which is what a
-    framework''s realm (realm-spring) gives meaning. Requires the appliance''s `source-tree` and `maven`
-    (`from: project`) producer kinds.'
-  version: 0.1.0
+  description: 'A Java project''s Maven build and its own source, read live by project key, each row linked
+    to its line. Yours, as a graph you can query, read where it lives when a question reaches it: its
+    Maven build (every module, the dependency tree Maven resolves, the versions its BOMs pin), and its
+    own source (every type, member, annotation and import, and every setting in its .properties and YAML
+    files). Name the project by a key: a repository, `https://github.com/acme/shop@main` (the default
+    branch without `@ref`), or a folder — under the world''s data/, or in the workspace the appliance
+    owner mounted with `embabel workspace use ~/code`, where `shop` means that folder''s `shop`. MATCH
+    (p:JavaProject {key: ''https://github.com/acme/shop''})-[:DECLARES_TYPE]->(t:JavaProjectType) … Nothing
+    is ingested and nothing is stored: a commit is read once and kept; a folder is read afresh. It knows
+    no framework — an annotation is its name and its attributes as written — which is what a framework''s
+    realm (realm-spring) gives meaning. Requires the appliance''s `source-tree` and `maven` (`from: project`)
+    producer kinds.'
+  version: 0.1.1
   author: Embabel
   tags:
   - java
@@ -881,7 +882,7 @@ realms:
     whole declaration and the lines it was on, through realm-java-code and realm-java-source-code. Nothing
     is ingested and nothing is stored. Requires realm-java-code and realm-java-source-code, and the appliance''s
     `stacktrace` producer kind and `files` producer with `unit: event`.'
-  version: 0.1.0
+  version: 0.1.1
   author: Rod Johnson
   tags:
   - java
