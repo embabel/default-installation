@@ -214,7 +214,7 @@ realms:
     (realm-business-vocabulary, installed first), so a question asked about support cases is answered
     here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
     own UI is what the next query sees.'
-  version: 0.2.2
+  version: 0.2.3
   author: Rod Johnson
   tags:
   - integrations
