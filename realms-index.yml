@@ -64,7 +64,7 @@ realms:
     the vocabulary''s types, edges and properties and joins on the CustomerAccount spine, so the same
     answers come from whichever CRM, helpdesk and billing system the world has. Nothing is stored: each
     answer is read from the three systems when it is asked for.'
-  version: 0.2.1
+  version: 0.2.2
   author: Rod Johnson
   tags:
   - crm
@@ -214,7 +214,7 @@ realms:
     (realm-business-vocabulary, installed first), so a question asked about support cases is answered
     here without naming Chatwoot. Every type is virtual: nothing is mirrored, and a change made in Chatwoot''s
     own UI is what the next query sees.'
-  version: 0.2.5
+  version: 0.2.6
   author: Rod Johnson
   tags:
   - integrations
@@ -935,7 +935,7 @@ realms:
     is answered here without naming Lago. A Lago customer also keys the CustomerAccount spine by its url,
     which is how an account the CRM knows reaches what billing knows about it. Every type is virtual:
     nothing is mirrored, and a change made in Lago''s own UI is what the next query sees.'
-  version: 0.2.5
+  version: 0.2.6
   author: Rod Johnson
   tags:
   - integrations
@@ -1104,7 +1104,7 @@ realms:
     by Odoo''s own domain, a single company or deal is one call, and every relation is one the ORM declares
     — nothing is guessed. Ships a skill that teaches a coding agent to extend the realm for a customer''s
     custom modules by reading fields_get through this same API.'
-  version: 0.2.5
+  version: 0.2.6
   author: Rod Johnson
   tags:
   - integrations
