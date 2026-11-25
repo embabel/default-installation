@@ -1369,6 +1369,19 @@ realms:
   - hebrew
   - reference
   maturity: experimental
+- name: trail-native
+  source: https://github.com/embabel-worlds/realm-trail-native.git
+  url: https://github.com/embabel-worlds/realm-trail-native
+  description: A Docker Python realm demo with pinned native wheels for Linux ARM64 and x86-64.
+- name: trail-planner
+  source: https://github.com/embabel-worlds/realm-trail-planner.git
+  url: https://github.com/embabel-worlds/realm-trail-planner
+  description: A reference Python realm for trail planning, Virtual Cypher, and locked Wasm and Docker
+    bundles.
+- name: trail-status
+  source: https://github.com/embabel-worlds/realm-trail-status.git
+  url: https://github.com/embabel-worlds/realm-trail-status
+  description: A standard-library Python realm with synthetic trail conditions and a public type.
 - name: travel
   source: https://github.com/embabel-worlds/realm-travel.git
   url: https://github.com/embabel-worlds/realm-travel
