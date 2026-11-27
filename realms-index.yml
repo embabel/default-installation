@@ -904,7 +904,7 @@ realms:
     It lists; it never changes the cluster, and it never reads a Secret. Give its service account the
     built-in `view` role. A pod carries the image it runs by digest and the version its labels claim,
     which is how a running container is traced to the commit that built it.'
-  version: 0.2.4
+  version: 0.2.5
   author: Rod Johnson
   tags:
   - kubernetes
