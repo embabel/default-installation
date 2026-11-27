@@ -898,12 +898,13 @@ realms:
     namespace. A Kubernetes cluster as a graph you can query, read live from the cluster''s own API when
     a question reaches it: what is running in a namespace, on how many pods, at which image and version,
     which pods are crashing and why, and what the cluster says went wrong. Nothing is copied into the
-    graph. A pod lives for minutes, so pods, containers, deployments and events are fetched for the namespace
-    a query names and are gone when it ends. Pin a namespace and traverse: `MATCH (n:KubeNamespace {name:''shop''})-[:HAS_POD]->(p:KubePod)`.
-    Read-only. It lists; it never changes the cluster, and it never reads a Secret. Give its service account
-    the built-in `view` role. A pod carries the image it runs by digest and the version its labels claim,
+    graph. A pod lives for minutes, so pods, containers, deployments, stateful sets, services, endpoints,
+    ingresses and events are fetched for the namespace a query names and are gone when it ends. Pin a
+    namespace and traverse: `MATCH (n:KubeNamespace {name:''shop''})-[:HAS_POD]->(p:KubePod)`. Read-only.
+    It lists; it never changes the cluster, and it never reads a Secret. Give its service account the
+    built-in `view` role. A pod carries the image it runs by digest and the version its labels claim,
     which is how a running container is traced to the commit that built it.'
-  version: 0.1.1
+  version: 0.2.3
   author: Rod Johnson
   tags:
   - kubernetes
