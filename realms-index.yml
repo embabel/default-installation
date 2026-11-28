@@ -1353,19 +1353,20 @@ realms:
   - cve
   - configuration
   maturity: experimental
-- name: start-here
-  source: https://github.com/embabel-worlds/realm-start-here.git
-  url: https://github.com/embabel-worlds/realm-start-here
-  description: 'The first thing a person sees in a new world, as a realm: an app that reads the world
-    and says what to do next. It knows whether a coding agent has ever connected, which realms are installed
-    and which are waiting for a key, and it changes as the person progresses: install a coding agent (Claude
-    Code or Codex, the commands for this machine), point it at this world''s code door, watch the handshake
-    land, then the first prompts to type, written against the realms this world holds. Four small views
-    over the world''s own configuration nodes carry the facts; the app is presentation. Nothing here writes
-    anything. When the person no longer needs it, uninstalling this realm takes the app away and leaves
-    the scope skill behind. A world makes this its first screen with `welcome.open: app:start-here` in
-    its config/world.yml. The world decides what opens on first arrival, never a realm.'
-  version: 0.1.0
+- name: start-here-building
+  source: https://github.com/embabel-worlds/realm-start-here-building.git
+  url: https://github.com/embabel-worlds/realm-start-here-building
+  description: 'Start here: building. The first thing a person with a coding agent sees in a new world,
+    as a realm: an app that reads the world and says what to do next. It knows whether a coding agent
+    has ever connected, which realms are installed and which are waiting for a key, and it changes as
+    the person progresses: install a coding agent (Claude Code or Codex, the commands for this machine),
+    point it at this world''s code door, watch the handshake land, then the first prompts to type, written
+    against the realms this world holds. Four small views over the world''s own configuration nodes carry
+    the facts; the app is presentation. Nothing here writes anything. When the person no longer needs
+    it, uninstalling this realm takes the app away and leaves the scope skill behind. A world makes this
+    its first screen with `welcome.open: app:start-here-building` in its config/world.yml. The world decides
+    what opens on first arrival, never a realm.'
+  version: 0.2.0
   author: Embabel
   tags:
   - onboarding
@@ -1468,7 +1469,7 @@ realms:
     and money regranted through a publishing intermediary from 360Giving. The Community Profile app (`apps/community-profile.html`)
     puts a place''s profile on one page. No API keys and no accounts — the realm works the moment it is
     installed.'
-  version: 0.5.2
+  version: 0.5.3
   author: rod
   tags:
   - united-kingdom
