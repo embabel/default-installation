@@ -1272,6 +1272,27 @@ realms:
   - counterparty
   - ofac
   category: compliance
+- name: scope
+  source: https://github.com/embabel-worlds/realm-scope.git
+  url: https://github.com/embabel-worlds/realm-scope
+  description: 'One skill and nothing else: how to build a realm around a scope. A scope is a boundary
+    someone owns and can point at: a Kubernetes namespace, a cloud account or a tag within it, a repository
+    or an organisation on a forge, a database, a tenant of a SaaS product, a directory of code. The skill
+    interrogates the scope with whatever realms the appliance''s catalogue can bring to bear, interviews
+    the owner, composes the realms the answers justify, writes the realm that gives the scope business
+    meaning, installs it with reads admitted and writes held back, and tests it against the sources directly.
+    Each kind of scope has its own annex, shipped by the realm that can see into it; this skill is the
+    part that is the same whatever the scope is.'
+  version: 0.1.8
+  author: Embabel
+  tags:
+  - authoring
+  - skill
+  - realm
+  - scope
+  - application
+  maturity: experimental
+  category: developer
 - name: scripture-vocabulary
   source: https://github.com/embabel-worlds/realm-scripture-vocabulary.git
   url: https://github.com/embabel-worlds/realm-scripture-vocabulary
